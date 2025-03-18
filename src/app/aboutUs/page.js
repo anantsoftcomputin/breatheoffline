@@ -1,7 +1,7 @@
 export const metadata = {
-  title: "About Us | UnplugWell - Your Digital Detox Partner",
+  title: "About Us - Discover the Vision Behind BreatheOffline",
   description:
-    "Learn about UnplugWell, your trusted source for digital detox solutions. Our mission is to help you create a healthier relationship with technology and embrace mindful living.",
+    "Learn more about BreatheOffline, our mission to inspire mindful living, and our commitment to helping you unplug, reconnect, and thrive in a digital world.",
 };
 
 import AboutUs from "@/components/AboutUs/AboutUs";

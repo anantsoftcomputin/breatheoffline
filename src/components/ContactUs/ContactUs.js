@@ -32,7 +32,7 @@ const ContactUs = () => {
     try {
       const response = await ajaxCall("/message/message/", {
         method: "POST",
-        data: { ...data, site: "2" },
+        data: { ...data, site: "3" },
       });
       if (response.status === 200 || response.status === 201) {
         toast.success("Message sent successfully! 🎉");
@@ -220,10 +220,10 @@ const ContactUs = () => {
                     <div>
                       <p className="text-gray/70 text-sm">Email us at</p>
                       <a
-                        href="mailto:support@unplugwell.com"
+                        href="mailto:support@breatheoffline.com"
                         className="text-gray-700 hover:underline"
                       >
-                        support@unplugwell.com
+                        support@breatheoffline.com
                       </a>
                     </div>
                   </div>

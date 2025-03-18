@@ -1,7 +1,7 @@
 export const metadata = {
-  title: "Explore Digital Detox Topics & Tips | UnplugWell",
+  title: "Explore Digital Detox Categories | Breathe Offline",
   description:
-    "Expert tips on digital detox, mindfulness, and tech-free living. Explore UnplugWell’s top categories for a balanced, healthier lifestyle.",
+    "Discover a variety of digital detox categories at Breathe Offline. From mindful living to screen-free activities, find the best ways to unplug and reclaim your time.",
 };
 import Categories from "@/components/Categories/Categories";
 

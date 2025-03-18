@@ -1,7 +1,7 @@
 export const metadata = {
-  title: "Digital Detox Blog | UnplugWell - Tips, Insights, and Inspiration",
+  title: "BreatheOffline Blog - Insights on Mindfulness and Digital Wellness",
   description:
-    "Stay informed with the UnplugWell blog. Dive into expert articles, personal stories, and practical tips to embrace a balanced, tech-free lifestyle.",
+    "Explore the BreatheOffline Blog for expert tips, inspiring stories, and practical advice on mindfulness, digital detox, and creating a balanced lifestyle.",
 };
 import Blog from "@/components/Blogs/Blog";
 

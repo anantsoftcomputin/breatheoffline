@@ -33,7 +33,7 @@ export default function Blog() {
     const fetchBlogs = async () => {
       try {
         const response = await ajaxCall(
-          `/posts/?site_domain=unplugwell.com&page=${page}`,
+          `/posts/?site_domain=breatheoffline.com&page=${page}`,
           { method: "GET" }
         );
         if (page === 1) {
@@ -61,7 +61,7 @@ export default function Blog() {
     const fetchCategories = async () => {
       try {
         const response = await ajaxCall(
-          "/get-categories/?site=unplugwell.com",
+          "/get-categories/?site=breatheoffline.com",
           { method: "GET" }
         );
         setCategories((prev) => [
@@ -215,12 +215,12 @@ export default function Blog() {
                 </div>
               )}
             </div>
-            <div className="hidden md:flex items-center gap-2">
+            <div className="hidden md:flex flex-wrap justify-center gap-4">
               {categories.map((category, index) => (
                 <button
                   key={index}
                   onClick={() => setSelectedCategory(category)}
-                  className={`px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${
+                  className={`px-6 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${
                     selectedCategory === category
                       ? "bg-purple-600 text-white shadow-lg shadow-purple-500/25 scale-105"
                       : "bg-purple-100 text-purple-600 hover:bg-purple-200"
@@ -239,7 +239,7 @@ export default function Blog() {
             <Sparkles className="h-5 w-5 text-purple-600" />
             <h2 className="text-2xl font-bold text-gray-900">Featured Post</h2>
           </div>
-          <Link href={`/blog/${featuredBlog.slug}`}>
+          <Link href={`/${featuredBlog.slug}`}>
             <motion.article
               whileHover={{ y: -5 }}
               transition={{ duration: 0.3 }}
@@ -390,7 +390,7 @@ export default function Blog() {
               }
             >
               {filteredBlogs.map((blog, index) => (
-                <Link key={index} href={`/blog/${blog.slug}`}>
+                <Link key={index} href={`/${blog.slug}`}>
                   <motion.article
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}

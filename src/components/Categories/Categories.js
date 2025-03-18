@@ -22,7 +22,7 @@ export default function Categories() {
     const fetchCategories = async () => {
       try {
         const response = await ajaxCall(
-          "/get-categories/?site=unplugwell.com",
+          "/get-categories/?site=breatheoffline.com",
           { method: "GET" }
         );
         setCategories(

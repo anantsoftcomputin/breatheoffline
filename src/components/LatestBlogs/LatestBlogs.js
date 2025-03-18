@@ -17,7 +17,7 @@ const LatestBlogs = () => {
     const fetchBlogs = async () => {
       try {
         const response = await ajaxCall(
-          "/posts-latest/?site_domain=unplugwell.com",
+          "/posts-latest/?site_domain=breatheoffline.com",
           { method: "GET" }
         );
         setBlogs(response.data.results);
@@ -35,7 +35,7 @@ const LatestBlogs = () => {
     const fetchCategories = async () => {
       try {
         const response = await ajaxCall(
-          "/get-categories/?site=unplugwell.com",
+          "/get-categories/?site=breatheoffline.com	",
           { method: "GET" }
         );
         setCategories((prev) => [
@@ -160,7 +160,7 @@ const LatestBlogs = () => {
         ) : filteredBlogs.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
             {filteredBlogs.map((blog, index) => (
-              <Link key={index} href={`/blog/${blog.slug}`}>
+              <Link key={index} href={`/${blog.slug}`}>
                 <article className="group relative overflow-hidden rounded-2xl shadow-lg transition-all duration-500 h-full flex flex-col">
                   <div className="relative h-64 overflow-hidden">
                     <img

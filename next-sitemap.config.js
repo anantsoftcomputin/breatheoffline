@@ -1,7 +1,7 @@
-const { default: ajaxCall } = require("@/helpers/ajaxCall");
+const { default: axios } = require("axios");
 
 module.exports = {
-  siteUrl: "https://unplugwell.com/",
+  siteUrl: "https://breatheoffline.com/",
   generateRobotsTxt: true,
   generateIndexSitemap: false,
   sitemapSize: 5000,
@@ -36,15 +36,13 @@ module.exports = {
 
   additionalPaths: async () => {
     try {
-      const blogResponse = await ajaxCall(
-        "/all-posts/?site_domain=unplugwell.com",
-        { method: "GET" }
+      const blogResponse = await axios.get(
+        "https://peekly.in/blog/api/all-posts/?site_domain=breatheoffline.com"
       );
       const blogPosts = blogResponse.data.results;
 
-      const categoryResponse = await ajaxCall(
-        "/get-categories/?site=unplugwell.com",
-        { method: "GET" }
+      const categoryResponse = await axios.get(
+        "https://peekly.in/blog/api/get-categories/?site=breatheoffline.com"
       );
       const categories = categoryResponse.data.results;
 
