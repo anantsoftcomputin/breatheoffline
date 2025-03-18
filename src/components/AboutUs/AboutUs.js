@@ -95,7 +95,7 @@ const AboutUs = () => {
         <div className="relative container mx-auto px-6">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-              Welcome to UnplugWell
+              Welcome to BreatheOffline
             </h1>
             <p className="text-xl text-purple-100 mb-8">
               Your sanctuary for rediscovering balance in the digital age. We
@@ -146,7 +146,7 @@ const AboutUs = () => {
                 Our Mission
               </h3>
               <p className="text-gray-800 text-lg mb-8">
-                At UnplugWell, we are passionate about helping people achieve
+                At BreatheOffline, we are passionate about helping people achieve
                 harmony between their digital and real lives. Through insightful
                 content, practical strategies, and inspiring stories, we guide
                 our community on a journey of mindfulness, productivity, and

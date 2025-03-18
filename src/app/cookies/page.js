@@ -18,11 +18,11 @@ export default function CookiesPolicy() {
               </div>
               <div className="p-6">
                 <p className="text-gray-600">
-                  breatheoffline.com (hereinafter referred to as "the Site," "we,"
-                  "us," or "our") uses cookies and other similar technologies to
-                  enhance your browsing experience. This Cookie Policy explains
-                  what cookies are, how we use them, and your choices regarding
-                  cookies.
+                  breatheoffline.com (hereinafter referred to as "the Site,"
+                  "we," "us," or "our") uses cookies and other similar
+                  technologies to enhance your browsing experience. This Cookie
+                  Policy explains what cookies are, how we use them, and your
+                  choices regarding cookies.
                 </p>
               </div>
             </div>
