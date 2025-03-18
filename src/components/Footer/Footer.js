@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { Facebook, Twitter, Instagram, ArrowUpCircle } from "lucide-react";
+import { Facebook, Twitter, ArrowUpCircle } from "lucide-react";
 import AdUnit from "@/components/AdUnit/AdUnit";
 
 const footerLinks = {
@@ -25,14 +25,9 @@ const socialLinks = [
   {
     name: "Facebook",
     icon: Facebook,
-    href: "https://www.facebook.com/people/Unplugwell-DigitalDetox/61570893369070/",
+    href: "https://www.facebook.com/people/BreatheOffline-Travel/61571280080816/",
   },
-  { name: "Twitter", icon: Twitter, href: "https://x.com/unplugwell" },
-  {
-    name: "Instagram",
-    icon: Instagram,
-    href: "https://www.instagram.com/unplugwell/",
-  },
+  { name: "Twitter", icon: Twitter, href: "https://x.com/breatheoffline" },
 ];
 
 const Footer = () => {
@@ -57,7 +52,7 @@ const Footer = () => {
 
   return (
     <div>
-      <AdUnit format="banner" />
+      <AdUnit />
       <footer className="bg-purple-600 text-white relative">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 py-12">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -65,7 +60,7 @@ const Footer = () => {
               <Link href="/" className="flex items-center space-x-2">
                 <img
                   src="/breatheoffline.png"
-                  alt="BreathOffline"
+                  alt="BreatheOffline"
                   className="h-8 w-auto"
                 />
               </Link>
@@ -111,7 +106,7 @@ const Footer = () => {
           <div className="border-t border-purple-500 pt-8 mt-8 text-center">
             <p className="text-gray-200 text-sm">
               {currentYear
-                ? `© ${currentYear} BreathOffline. All rights reserved.`
+                ? `© ${currentYear} BreatheOffline. All rights reserved.`
                 : "Loading..."}
             </p>
           </div>

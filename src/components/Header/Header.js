@@ -22,7 +22,7 @@ const Header = () => {
             <Link href="/" className="flex items-center space-x-2">
               <img
                 src="/breatheoffline.png"
-                alt="BreathOffline"
+                alt="BreatheOffline"
                 className="h-8 w-auto"
               />
             </Link>

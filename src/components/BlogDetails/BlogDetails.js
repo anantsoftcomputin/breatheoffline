@@ -5,7 +5,6 @@ import {
   Calendar,
   Facebook,
   Twitter,
-  Instagram,
   Tag,
   Eye,
   Sparkles,
@@ -687,7 +686,7 @@ export default function BlogDetails({ slug }) {
             <RelatedArticles relatedBlogs={relatedBlogs} />
           </div>
           <div className="my-8">
-            <AdUnit format="banner" />
+            <AdUnit />
           </div>
         </div>
         <div className="w-64 lg:w-80 p-6 border-l border-gray-200 flex-shrink-0 overflow-y-auto bg-backgroundColor-paper">
@@ -704,7 +703,9 @@ export default function BlogDetails({ slug }) {
             <div className="grid grid-cols-3 gap-3">
               <button
                 className="flex flex-col items-center justify-center p-3 rounded-lg bg-[#1DA1F2]/10 text-[#1DA1F2] hover:bg-[#1DA1F2]/20 transition-colors"
-                onClick={() => window.open("https://x.com/unplugwell")}
+                onClick={() =>
+                  window.open("https://x.com/breatheoffline", "_blank")
+                }
               >
                 <Twitter className="h-6 w-6 mb-1" />
                 <span className="text-xs">Twitter</span>
@@ -713,22 +714,13 @@ export default function BlogDetails({ slug }) {
                 className="flex flex-col items-center justify-center p-3 rounded-lg bg-[#1877F2]/10 text-[#1877F2] hover:bg-[#1877F2]/20 transition-colors"
                 onClick={() =>
                   window.open(
-                    "https://www.facebook.com/people/Unplugwell-DigitalDetox/61570893369070/",
+                    "https://www.facebook.com/people/BreatheOffline-Travel/61571280080816/",
                     "_blank"
                   )
                 }
               >
                 <Facebook className="h-6 w-6 mb-1" />
                 <span className="text-xs">Facebook</span>
-              </button>
-              <button
-                className="flex flex-col items-center justify-center p-3 rounded-lg bg-[#0A66C2]/10 text-[#0A66C2] hover:bg-[#0A66C2]/20 transition-colors"
-                onClick={() =>
-                  window.open("https://www.instagram.com/unplugwell/")
-                }
-              >
-                <Instagram className="h-6 w-6 mb-1" />
-                <span className="text-xs">Instagram</span>
               </button>
             </div>
           </motion.div>
@@ -758,7 +750,7 @@ export default function BlogDetails({ slug }) {
           )}
           {blog.tags?.length > 0 && (
             <div className="mt-6 mb-6">
-              <AdUnit format="banner" />
+              <AdUnit />
             </div>
           )}
           {blog.author && (
@@ -787,7 +779,7 @@ export default function BlogDetails({ slug }) {
             </motion.div>
           )}
           <div className="mt-6 mb-6">
-            <AdUnit format="banner" />
+            <AdUnit />
           </div>
         </div>
       </div>

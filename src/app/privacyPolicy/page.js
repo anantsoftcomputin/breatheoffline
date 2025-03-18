@@ -23,8 +23,8 @@ export default function PrivacyPolicy() {
                   your privacy and ensuring the security of your personal
                   information. This Privacy Policy outlines how we collect, use,
                   disclose, and safeguard your information when you visit our
-                  Site. By using breatheoffline.com, you agree to the terms of this
-                  Privacy Policy.
+                  Site. By using breatheoffline.com, you agree to the terms of
+                  this Privacy Policy.
                 </p>
               </div>
             </div>
@@ -71,7 +71,7 @@ export default function PrivacyPolicy() {
                   </ul>
 
                   <h3 className="font-semibold text-gray-900 mt-4">
-                    Comments :    
+                    Comments :
                   </h3>
                   <ul className="list-disc list-inside text-gray-600 space-y-2">
                     <li>
@@ -353,7 +353,7 @@ export default function PrivacyPolicy() {
                   please contact us:
                 </p>
                 <p className="mt-2 text-purple-600">
-                  Email: unplugwell@gmail.com
+                  Email: support@breatheoffline.com
                   <br />
                   Contact: Available on breatheoffline.com
                 </p>
