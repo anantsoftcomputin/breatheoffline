@@ -7,10 +7,10 @@ import AdBanner from "@/components/AdBanner/AdBanner";
 export const metadata = {
   icons: {
     icon: [
-      { url: "/unplugwell.png" },
-      { url: "/unplugwell.png", sizes: "32x32", type: "image/png" },
+      { url: "/breatheoffline.png" },
+      { url: "/breatheoffline.png", sizes: "32x32", type: "image/png" },
     ],
-    apple: { url: "/unplugwell.png", sizes: "180x180", type: "image/png" },
+    apple: { url: "/breatheoffline.png", sizes: "180x180", type: "image/png" },
   },
 };
 

@@ -13,7 +13,7 @@ const TrendingBlogs = () => {
     const fetchTrendingBlogs = async () => {
       try {
         const response = await ajaxCall(
-          "/posts-popular/?site_domain=unplugwell.com",
+          "/posts-popular/?site_domain=breatheoffline.com",
           { method: "GET" }
         );
         setTrendingBlogs(response.data.results);
@@ -93,7 +93,7 @@ const TrendingBlogs = () => {
         ) : trendingBlogs.length > 0 ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {trendingBlogs?.map((blog, index) => (
-              <Link key={index} href={`/blog/${blog.slug}`}>
+              <Link key={index} href={`/${blog.slug}`}>
                 <article className="group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 flex flex-col">
                   <div className="relative w-full h-48 sm:h-56 md:h-60 lg:h-56 overflow-hidden flex-shrink-0">
                     <img

@@ -58,22 +58,18 @@ const Footer = () => {
   return (
     <div>
       <AdUnit format="banner" />
-      <footer className="bg-gray-900 text-white relative">
+      <footer className="bg-purple-600 text-white relative">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 py-12">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div>
-              <Link
-                href="/"
-                className="flex items-center space-x-2 text-2xl font-bold text-white"
-              >
+              <Link href="/" className="flex items-center space-x-2">
                 <img
-                  src="/unplugwell.png"
-                  alt="Unplugwell"
+                  src="/breatheoffline.png"
+                  alt="BreathOffline"
                   className="h-8 w-auto"
                 />
-                <span className="text-xl md:inline-block ml-2">Unplugwell</span>
               </Link>
-              <p className="mt-4 text-gray-400">
+              <p className="mt-4 text-gray-200">
                 Empowering mindful technology use for a balanced digital
                 lifestyle.
               </p>
@@ -84,7 +80,7 @@ const Footer = () => {
                     href={href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-400 hover:text-white transition-colors"
+                    className="text-white hover:text-purple-300 transition-colors duration-200"
                   >
                     <Icon className="h-6 w-6" />
                     <span className="sr-only">{name}</span>
@@ -94,7 +90,7 @@ const Footer = () => {
             </div>
             {Object.entries(footerLinks).map(([section, links], index) => (
               <div key={index}>
-                <h3 className="text-lg font-semibold mb-4 capitalize">
+                <h3 className="text-lg font-semibold mb-4 capitalize text-white">
                   {section}
                 </h3>
                 <ul className="space-y-2">
@@ -102,7 +98,7 @@ const Footer = () => {
                     <li key={href}>
                       <Link
                         href={href}
-                        className="text-gray-400 hover:text-white transition-colors"
+                        className="text-white hover:text-purple-300 transition-colors duration-200"
                       >
                         {name}
                       </Link>
@@ -112,10 +108,10 @@ const Footer = () => {
               </div>
             ))}
           </div>
-          <div className="border-t border-gray-800 pt-8 mt-8 text-center">
-            <p className="text-gray-400 text-sm">
+          <div className="border-t border-purple-500 pt-8 mt-8 text-center">
+            <p className="text-gray-200 text-sm">
               {currentYear
-                ? `© ${currentYear} Unplugwell. All rights reserved.`
+                ? `© ${currentYear} BreathOffline. All rights reserved.`
                 : "Loading..."}
             </p>
           </div>

@@ -18,7 +18,7 @@ export default function CookiesPolicy() {
               </div>
               <div className="p-6">
                 <p className="text-gray-600">
-                  UnplugWell.com (hereinafter referred to as "the Site," "we,"
+                  breatheoffline.com (hereinafter referred to as "the Site," "we,"
                   "us," or "our") uses cookies and other similar technologies to
                   enhance your browsing experience. This Cookie Policy explains
                   what cookies are, how we use them, and your choices regarding
@@ -218,11 +218,11 @@ export default function CookiesPolicy() {
                   Conditions, please contact us at:
                 </p>
                 <p className="mt-2 text-purple-600">
-                  Email: support@unplugwell.com
+                  Email: support@breatheoffline.com
                   <br />
                   Address: Alkapuri, Vadodara, Gujarat, India 390007.
                   <br />
-                  Contact: Available on UnplugWell.com
+                  Contact: Available on breatheoffline.com
                 </p>
               </div>
             </div>

@@ -1,7 +1,7 @@
 export const metadata = {
-  title: "Contact Us | UnplugWell - Reach Out for Digital Detox Support",
+  title: "Contact BreatheOffline - We're Here to Help",
   description:
-    "Have questions about digital detox or need assistance? Contact UnplugWell today. We’re here to help you unplug and thrive in a hyper-connected world.",
+    "Have questions or feedback? Connect with the BreatheOffline team. We’d love to hear from you and support your journey toward mindful living.",
 };
 import ContactUs from "@/components/ContactUs/ContactUs";
 

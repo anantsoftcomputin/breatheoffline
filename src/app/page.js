@@ -1,7 +1,7 @@
 export const metadata = {
-  title: "UnplugWell: Your Guide to Mindful Digital Detox and Wellness",
+  title: "BreatheOffline - Balance Your Digital Life, Embrace Wellness",
   description:
-    "Discover the benefits of digital detox with UnplugWell. Explore expert tips, resources, and strategies to disconnect, recharge, and find balance in a tech-driven world.",
+    "BreatheOffline offers insights on achieving harmony in a tech-driven world. Find resources for mindfulness, self-care, and a healthier connection to technology.",
 };
 
 import Hero from "@/components/Hero/Hero";

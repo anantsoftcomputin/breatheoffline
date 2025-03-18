@@ -32,7 +32,7 @@ const NewsLetter = () => {
     try {
       const response = await ajaxCall("/subscription/subscribe-create/", {
         method: "POST",
-        data: { email: data.email, site: "2" },
+        data: { email: data.email, site: "3" },
       });
       if (response.status === 200 || response.status === 201) {
         toast.success("Subscribed successfully! 🎉");

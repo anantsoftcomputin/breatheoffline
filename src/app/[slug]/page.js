@@ -8,7 +8,7 @@ export const generateMetadata = async ({ params }) => {
     if (!slug) {
       return {
         title: "Blog",
-        description: "Unplugwell Blog",
+        description: "BreatheOffline Blog",
       };
     }
     const { data: blog } = await ajaxCall(`/post/${slug}/`, { method: "GET" });

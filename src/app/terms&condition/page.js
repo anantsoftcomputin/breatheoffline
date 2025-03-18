@@ -19,7 +19,7 @@ export default function TermsAndConditions() {
               </div>
               <div className="p-6">
                 <p className="text-gray-600">
-                  By accessing and using UnplugWell.com (hereinafter referred to
+                  By accessing and using breatheoffline.com (hereinafter referred to
                   as "the Site," "we," "us," or "our"), you agree to comply with
                   and be bound by these Terms and Conditions. If you do not
                   agree with any part of these terms, you must not use our Site.
@@ -40,9 +40,9 @@ export default function TermsAndConditions() {
                   </h3>
                   <ul className="list-disc list-inside text-gray-600 space-y-2">
                     <li>
-                      All content on UnplugWell.com, including but not limited
+                      All content on breatheoffline.com, including but not limited
                       to text, images, graphics, logos, and software, is the
-                      property of UnplugWell.com or its licensors and is
+                      property of breatheoffline.com or its licensors and is
                       protected by copyright and other intellectual property
                       laws.
                     </li>
@@ -113,7 +113,7 @@ export default function TermsAndConditions() {
                     <li>
                       When leaving comments, you agree to remain respectful. Any
                       comments deemed inappropriate will be removed by
-                      UnplugWell.com.
+                      breatheoffline.com.
                     </li>
                   </ul>
                 </div>
@@ -133,7 +133,7 @@ export default function TermsAndConditions() {
                   </h3>
                   <ul className="list-disc list-inside text-gray-600 space-y-2">
                     <li>
-                      The content on UnplugWell.com is provided for
+                      The content on breatheoffline.com is provided for
                       informational purposes only and should not be considered
                       professional advice. We make no representations or
                       warranties about the accuracy, completeness, or
@@ -176,7 +176,7 @@ export default function TermsAndConditions() {
                   </h3>
                   <ul className="list-disc list-inside text-gray-600 space-y-2">
                     <li>
-                      To the fullest extent permitted by law, UnplugWell.com and
+                      To the fullest extent permitted by law, breatheoffline.com and
                       its affiliates, officers, directors, employees, and agents
                       shall not be liable for any direct, indirect, incidental,
                       consequential, or punitive damages arising out of or
@@ -188,7 +188,7 @@ export default function TermsAndConditions() {
                   </h3>
                   <ul className="list-disc list-inside text-gray-600 space-y-2">
                     <li>
-                      You agree to indemnify and hold UnplugWell.com harmless
+                      You agree to indemnify and hold breatheoffline.com harmless
                       from any claims, damages, or expenses arising out of your
                       use of our Site or your violation of these Terms and
                       Conditions.
@@ -309,11 +309,11 @@ export default function TermsAndConditions() {
                   Conditions, please contact us at:
                 </p>
                 <p className="mt-2 text-purple-600">
-                  Email: support@unplugwell.com
+                  Email: support@breatheoffline.com
                   <br />
                   Address: Alkapuri, Vadodara, Gujarat, India 390007.
                   <br />
-                  Contact: Available on UnplugWell.com
+                  Contact: Available on breatheoffline.com
                 </p>
               </div>
             </div>
@@ -327,7 +327,7 @@ export default function TermsAndConditions() {
               <div className="p-6">
                 <p className="text-gray-600">
                   These Terms and Conditions constitute the entire agreement
-                  between you and UnplugWell.com regarding your use of our Site,
+                  between you and breatheoffline.com regarding your use of our Site,
                   superseding any prior agreements.
                 </p>
               </div>

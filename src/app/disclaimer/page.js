@@ -18,7 +18,7 @@ export default function Disclaimer() {
               </div>
               <div className="p-6">
                 <p className="text-gray-600">
-                  The information provided on UnplugWell.com (hereinafter
+                  The information provided on breatheoffline.com (hereinafter
                   referred to as "the Site," "we," "us," or "our") is for
                   general informational and educational purposes only. It is not
                   intended as a substitute for professional advice, including
@@ -146,7 +146,7 @@ export default function Disclaimer() {
                   </h3>
                   <ul className="list-disc list-inside text-gray-600 space-y-2">
                     <li>
-                      To the fullest extent permitted by law, UnplugWell.com and
+                      To the fullest extent permitted by law, breatheoffline.com and
                       its affiliates, officers, directors, employees, and agents
                       shall not be liable for any direct, indirect, incidental,
                       consequential, or punitive damages arising out of or
@@ -181,7 +181,7 @@ export default function Disclaimer() {
                   <ul className="list-disc list-inside text-gray-600 space-y-2">
                     <li>
                       The inclusion of external links does not imply endorsement
-                      or recommendation by UnplugWell.com.
+                      or recommendation by breatheoffline.com.
                     </li>
                   </ul>
                 </div>
@@ -245,11 +245,11 @@ export default function Disclaimer() {
                   Conditions, please contact us at:
                 </p>
                 <p className="mt-2 text-purple-600">
-                  Email: support@unplugwell.com
+                  Email: support@breatheoffline.com
                   <br />
                   Address: Alkapuri, Vadodara, Gujarat, India 390007.
                   <br />
-                  Contact: Available on UnplugWell.com
+                  Contact: Available on breatheoffline.com
                 </p>
               </div>
             </div>

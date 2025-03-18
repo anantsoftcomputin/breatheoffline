@@ -15,19 +15,16 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-gray-900 text-white">
+    <header className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-purple-600 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center space-x-2">
               <img
-                src="/unplugwell.png"
-                alt="Unplugwell"
+                src="/breatheoffline.png"
+                alt="BreathOffline"
                 className="h-8 w-auto"
               />
-              <span className="text-2xl font-bold text-white transition-colors">
-                BreathOffline
-              </span>
             </Link>
           </div>
           <nav className="hidden md:flex items-center space-x-8">
@@ -35,7 +32,7 @@ const Header = () => {
               <Link
                 key={index}
                 href={item.href}
-                className="text-gray-400 hover:text-white font-medium transition-colors"
+                className="text-white hover:text-purple-300 font-medium transition-colors duration-200"
               >
                 {item.name}
               </Link>
@@ -44,7 +41,7 @@ const Header = () => {
           <div className="flex md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="p-2 rounded-md text-white transition-colors"
+              className="p-2 rounded-md text-white hover:text-purple-300 transition-colors duration-200"
             >
               {isMenuOpen ? (
                 <X className="h-6 w-6" />
@@ -55,13 +52,13 @@ const Header = () => {
           </div>
         </div>
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-gray-800">
+          <div className="md:hidden py-4 border-t border-purple-500">
             <div className="flex flex-col space-y-4">
               {navigation.map((item, index) => (
                 <Link
                   key={item.name + index}
                   href={item.href}
-                  className="text-gray-400 hover:text-white font-medium block px-3 py-2 rounded-md hover:bg-gray-800 transition-colors"
+                  className="text-white hover:text-purple-300 font-medium block px-3 py-2 rounded-md hover:bg-purple-700 transition-colors duration-200"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
