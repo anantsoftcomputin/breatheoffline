@@ -5,6 +5,7 @@ import {
   Calendar,
   Facebook,
   Twitter,
+  Instagram,
   ArrowLeft,
   Tag,
   Eye,
@@ -189,15 +190,6 @@ export default function BlogDetails({ slug }) {
                 </h3>
                 <div className="grid grid-cols-3 gap-3">
                   <button
-                    className="flex flex-col items-center justify-center p-3 rounded-lg bg-[#1DA1F2]/10 text-[#1DA1F2] hover:bg-[#1DA1F2]/20 transition-colors"
-                    onClick={() =>
-                      window.open("https://x.com/breatheoffline", "_blank")
-                    }
-                  >
-                    <Twitter className="h-6 w-6 mb-1" />
-                    <span className="text-xs">Twitter</span>
-                  </button>
-                  <button
                     className="flex flex-col items-center justify-center p-3 rounded-lg bg-[#1877F2]/10 text-[#1877F2] hover:bg-[#1877F2]/20 transition-colors"
                     onClick={() =>
                       window.open(
@@ -208,6 +200,27 @@ export default function BlogDetails({ slug }) {
                   >
                     <Facebook className="h-6 w-6 mb-1" />
                     <span className="text-xs">Facebook</span>
+                  </button>
+                  <button
+                    className="flex flex-col items-center justify-center p-3 rounded-lg bg-[#1DA1F2]/10 text-[#1DA1F2] hover:bg-[#1DA1F2]/20 transition-colors"
+                    onClick={() =>
+                      window.open("https://x.com/breatheoffline", "_blank")
+                    }
+                  >
+                    <Twitter className="h-6 w-6 mb-1" />
+                    <span className="text-xs">Twitter</span>
+                  </button>
+                  <button
+                    className="flex flex-col items-center justify-center p-3 rounded-lg bg-[#E4405F]/10 text-[#E4405F] hover:bg-[#E4405F]/20 transition-colors"
+                    onClick={() =>
+                      window.open(
+                        "https://www.instagram.com/breatheoffline/",
+                        "_blank"
+                      )
+                    }
+                  >
+                    <Instagram className="h-6 w-6 mb-1" />
+                    <span className="text-xs">Instagram</span>
                   </button>
                 </div>
               </motion.div>

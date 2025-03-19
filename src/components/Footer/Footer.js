@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { Facebook, Twitter, ArrowUpCircle } from "lucide-react";
+import { Facebook, Twitter, Instagram, ArrowUpCircle } from "lucide-react";
 import AdUnit from "@/components/AdUnit/AdUnit";
 
 const footerLinks = {
@@ -28,6 +28,11 @@ const socialLinks = [
     href: "https://www.facebook.com/people/BreatheOffline-Travel/61571280080816/",
   },
   { name: "Twitter", icon: Twitter, href: "https://x.com/breatheoffline" },
+  {
+    name: "Instagram",
+    icon: Instagram,
+    href: "https://www.instagram.com/breatheoffline/",
+  },
 ];
 
 const Footer = () => {
