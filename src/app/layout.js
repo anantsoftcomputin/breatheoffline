@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
         <Script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-T02TC97Y4Y"
-        />
+        ></Script>
         <Script
           id="google-analytics"
           strategy="afterInteractive"
@@ -35,11 +35,15 @@ export default function RootLayout({ children }) {
               gtag('config', 'G-T02TC97Y4Y');
             `,
           }}
-        />
+        ></Script>
         <meta
           name="google-site-verification"
           content="-vEQwCv3N-7CYJlks9qASX9zmgZ-7sbhBPfH4JKkxT4"
-        />
+        ></meta>
+        <meta
+          name="google-adsense-account"
+          content="ca-pub-1049611485767103"
+        ></meta>
       </head>
       <body>
         <Header />
