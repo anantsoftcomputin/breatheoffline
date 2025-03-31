@@ -422,7 +422,7 @@ export default function BlogDetails({ slug }) {
   };
 
   return (
-    <main className="h-screen flex flex-col bg-gradient-to-r from-indigo-50/30 to-pink-50/30 overflow-hidden  pt-16">
+    <main className="h-screen flex flex-col bg-gradient-to-r from-indigo-50/30 to-pink-50/30 overflow-hidden pt-16">
       <div className="fixed top-0 left-0 w-full z-50 h-1 bg-transparent">
         <div
           className="h-full bg-gradient-to-r from-indigo-600 to-pink-600"
@@ -628,7 +628,7 @@ export default function BlogDetails({ slug }) {
           ref={bodyRef}
           className="flex-grow h-full overflow-y-auto pb-12 bg-white"
         >
-          <div className="max-w-3xl mx-auto px-6 py-6">
+          <div className="max-w-6xl mx-auto px-6 py-6">
             <div ref={contentRef}>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -680,8 +680,8 @@ export default function BlogDetails({ slug }) {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.4 }}
-                className="prose prose-lg prose-headings:text-gray-900 prose-p:text-gray-600 max-w-none bg-gradient-to-br from-indigo-50 to-pink-50 rounded-xl p-6 shadow-md"
                 dangerouslySetInnerHTML={{ __html: blog.content }}
+                className="p-6 prose max-w-none bg-gradient-to-br from-indigo-50 to-pink-50 rounded-xl shadow-md"
               />
             </div>
             <RelatedArticles relatedBlogs={relatedBlogs} />
