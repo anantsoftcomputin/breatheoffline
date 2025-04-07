@@ -90,14 +90,14 @@ const AboutUs = () => {
 
   return (
     <main className="pt-12 min-h-screen bg-gray-50">
-      <section className="relative py-20 bg-gradient-to-br from-emerald-700 via-emerald-600 to-emerald-700">
+      <section className="relative py-20 bg-emerald-100">
         <div className="absolute inset-0 bg-grid-white/[0.05]" />
         <div className="relative container mx-auto px-6">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               Welcome to BreatheOffline
             </h1>
-            <p className="text-xl text-emerald-100 mb-8">
+            <p className="text-xl text-gray-700 mb-8 max-w-2xl mx-auto">
               Your sanctuary for rediscovering balance in the digital age. We
               empower individuals to take control of their screen time and
               cultivate healthier, more fulfilling lives offline.
@@ -243,16 +243,16 @@ const AboutUs = () => {
           </div>
         </div>
       </section>
-      <section className="py-20 bg-gradient-to-br from-emerald-900 via-emerald-800 to-emerald-900">
+      <section className="py-20 bg-emerald-50">
         <div className="container mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
+          <h2 className="text-3xl font-bold text-emerald-800 mb-6">
             Join Us on the Journey
           </h2>
-          <p className="text-xl text-emerald-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-700 mb-8 max-w-2xl mx-auto">
             Together, we can unplug and thrive. Start your digital detox journey
             today and rediscover the beauty of living in the present moment.
           </p>
-          <button className="bg-white text-emerald-900 px-8 py-3 rounded-lg font-semibold hover:bg-emerald-50 transition-colors duration-300">
+          <button className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white font-semibold transition-colors duration-300 disabled:opacity-70">
             Get Started
           </button>
         </div>

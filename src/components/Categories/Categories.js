@@ -1,7 +1,8 @@
 "use client";
 import { useEffect, useState } from "react";
-import { ArrowRight, Search, Folder } from "lucide-react";
+import { ArrowRight, Search, Folder, X } from "lucide-react";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import ajaxCall from "@/helpers/ajaxCall";
 
 const gradientColors = [
@@ -50,26 +51,41 @@ export default function Categories() {
 
   return (
     <main className="py-12 min-h-screen">
-      <section className="relative py-20 bg-gradient-to-br from-emerald-700 via-emerald-600 to-emerald-700">
+      <section className="relative py-20 bg-emerald-100">
         <div className="absolute inset-0 bg-grid-white/[0.05]" />
         <div className="relative container mx-auto px-6">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
               Categories
             </h1>
-            <p className="text-xl text-emerald-100 mb-8">
+            <p className="text-xl text-gray-700 mb-8 max-w-2xl mx-auto">
               Discover focused content across various aspects of digital
               wellness
             </p>
             <div className="relative max-w-2xl mx-auto">
-              <input
-                type="text"
-                placeholder="Search categories..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-12 pr-4 py-4 rounded-full bg-white/10 backdrop-blur-sm text-white placeholder-emerald-200 border border-white/20 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:bg-white/20"
-              />
-              <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-emerald-200" />
+              <motion.div
+                initial={{ scale: 0.95, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ delay: 0.2 }}
+                className="relative"
+              >
+                <input
+                  type="text"
+                  placeholder="Search categories..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-full pl-12 pr-4 py-4 md:py-5 rounded-full bg-white text-gray-800 placeholder-gray-500 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-emerald-500 transition-all duration-300"
+                />
+                <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-400" />
+                {searchQuery && (
+                  <button
+                    onClick={() => setSearchQuery("")}
+                    className="absolute right-4 top-1/2 -translate-y-1/2 h-6 w-6 rounded-full bg-gray-200 text-gray-600 flex items-center justify-center hover:bg-gray-300 transition-colors"
+                  >
+                    <X className="h-4 w-4" />
+                  </button>
+                )}
+              </motion.div>
             </div>
           </div>
         </div>

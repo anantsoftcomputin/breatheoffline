@@ -51,25 +51,20 @@ const NewsLetter = () => {
   return (
     <section id="newsletter-section" className="relative py-20 overflow-hidden">
       <ToastContainer position="top-right" autoClose={3000} />
-      <div className="absolute inset-0 bg-gradient-to-br from-emerald-900 via-emerald-800 to-emerald-900">
+      <div className="absolute inset-0 bg-emerald-50">
         <div className="absolute inset-0 bg-grid-white/[0.05]" />
-      </div>
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-emerald-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob" />
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-emerald-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000" />
-        <div className="absolute top-40 left-40 w-80 h-80 bg-emerald-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-4000" />
       </div>
       <div className="relative container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12 transition-all duration-700">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 text-white text-sm font-medium mb-6">
-              <Sparkles className="h-4 w-4" />
-              Join Our Community
+            <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-emerald-100 border border-emerald-200 text-emerald-800 mb-6 shadow-sm">
+              <Sparkles className="h-4 w-4 text-emerald-600 mr-2" />
+              <span className="text-sm font-medium">Join Our Community</span>
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-emerald-800 mb-6">
               Get Weekly Digital Wellness Insights
             </h2>
-            <p className="text-xl text-emerald-100 max-w-2xl mx-auto">
+            <p className="text-lg text-gray-700 max-w-2xl mx-auto">
               Subscribe to our newsletter and receive expert tips on maintaining
               digital balance and mindful technology use.
             </p>
@@ -119,17 +114,17 @@ const NewsLetter = () => {
           <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl mx-auto transition-all duration-700 delay-400">
             {benefits.map((benefit, index) => (
               <div
-                key={benefit + index}
-                className="flex items-center gap-3 text-emerald-100"
+                key={index}
+                className="flex items-center gap-3 text-gray-700"
               >
-                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-white/10 flex items-center justify-center">
-                  <CheckCircle className="h-4 w-4 text-emerald-300" />
+                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-emerald-100 flex items-center justify-center border border-emerald-200">
+                  <CheckCircle className="h-4 w-4 text-emerald-600" />
                 </div>
                 <span>{benefit}</span>
               </div>
             ))}
           </div>
-          <p className="mt-8 text-center text-sm text-emerald-200/80 transition-all duration-700 delay-500">
+          <p className="mt-8 text-center text-sm text-gray-500 transition-all duration-700 delay-500">
             We respect your privacy. Unsubscribe at any time.
           </p>
         </div>

@@ -206,10 +206,7 @@ export default function Blog() {
 
   return (
     <main className="py-10 min-h-screen">
-      <section className="relative py-20 bg-gradient-to-br from-emerald-700 via-emerald-600 to-emerald-700">
-        <div className="absolute inset-0 bg-grid-white/[0.05]" />
-        <div className="absolute -inset-x-0 top-0 h-40 bg-[url('/pattern-light.svg')] opacity-10" />
-        <div className="absolute -inset-x-0 bottom-0 h-40 bg-[url('/pattern-light.svg')] opacity-10" />
+      <section className="relative py-20 bg-emerald-50">
         <div className="relative container mx-auto px-4 sm:px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -217,10 +214,10 @@ export default function Blog() {
             transition={{ duration: 0.5 }}
             className="max-w-3xl mx-auto text-center"
           >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
               Explore Our Blog
             </h1>
-            <p className="text-xl text-emerald-100 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-700 mb-8 max-w-2xl mx-auto">
               Discover insights and strategies for maintaining digital wellness
               in today's connected world.
             </p>
@@ -236,13 +233,13 @@ export default function Blog() {
                   placeholder="Search blogs..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-12 pr-4 py-4 md:py-5 rounded-full bg-white/10 backdrop-blur-sm text-white placeholder-emerald-200 border border-white/20 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:bg-white/20 transition-all duration-300"
+                  className="w-full pl-12 pr-4 py-4 md:py-5 rounded-full bg-white text-gray-800 placeholder-gray-500 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-emerald-500 transition-all duration-300"
                 />
-                <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-emerald-200" />
+                <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-400" />
                 {searchQuery && (
                   <button
                     onClick={() => setSearchQuery("")}
-                    className="absolute right-4 top-1/2 -translate-y-1/2 h-6 w-6 rounded-full bg-white/20 text-white flex items-center justify-center hover:bg-white/30 transition-colors"
+                    className="absolute right-4 top-1/2 -translate-y-1/2 h-6 w-6 rounded-full bg-gray-200 text-gray-600 flex items-center justify-center hover:bg-gray-300 transition-colors"
                   >
                     <X className="h-4 w-4" />
                   </button>
@@ -253,14 +250,14 @@ export default function Blog() {
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.4 }}
-                  className="flex p-1 rounded-full bg-white/10 border border-white/20"
+                  className="flex p-1 rounded-full bg-emerald-100 border border-emerald-200/70"
                 >
                   <button
                     onClick={() => setViewMode("grid")}
                     className={`px-4 py-1 rounded-full text-sm ${
                       viewMode === "grid"
-                        ? "bg-white text-emerald-900"
-                        : "text-white"
+                        ? "bg-emerald-600 text-white shadow"
+                        : "text-emerald-700 hover:bg-emerald-200/60"
                     } transition-all duration-300`}
                   >
                     Grid
@@ -269,8 +266,8 @@ export default function Blog() {
                     onClick={() => setViewMode("list")}
                     className={`px-4 py-1 rounded-full text-sm ${
                       viewMode === "list"
-                        ? "bg-white text-emerald-900"
-                        : "text-white"
+                        ? "bg-emerald-600 text-white shadow"
+                        : "text-emerald-700 hover:bg-emerald-200/60"
                     } transition-all duration-300`}
                   >
                     List
@@ -305,10 +302,10 @@ export default function Blog() {
                         setSelectedCategory(category);
                         setIsCategoryOpen(false);
                       }}
-                      className={`w-full px-4 py-2 text-left rounded-full text-sm font-semibold transition-all duration-300 ${
+                      className={`inline-flex items-center justify-center px-6 py-2 rounded-full text-sm font-semibold transition-colors duration-300 border border-emerald-600  ${
                         selectedCategory === category
-                          ? "bg-emerald-600 text-white shadow-lg shadow-emerald-500/25 scale-105"
-                          : "bg-emerald-100 text-emerald-600 hover:bg-emerald-200"
+                          ? "bg-emerald-600 text-white shadow-lg shadow-emerald-500/25"
+                          : "bg-white text-emerald-600 hover:bg-emerald-50"
                       }`}
                     >
                       {category}
@@ -322,10 +319,10 @@ export default function Blog() {
                 <button
                   key={index}
                   onClick={() => setSelectedCategory(category)}
-                  className={`px-6 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${
+                  className={`inline-flex items-center justify-center px-6 py-2 rounded-full text-sm font-semibold transition-colors duration-300 border border-emerald-600  ${
                     selectedCategory === category
-                      ? "bg-emerald-600 text-white shadow-lg shadow-emerald-500/25 scale-105"
-                      : "bg-emerald-100 text-emerald-600 hover:bg-emerald-200"
+                      ? "bg-emerald-600 text-white shadow-lg shadow-emerald-500/25"
+                      : "bg-white text-emerald-600 hover:bg-emerald-50"
                   }`}
                 >
                   {category}
