@@ -63,10 +63,10 @@ const LatestBlogs = () => {
   }, [selectedCategory, blogs]);
 
   return (
-    <section className="py-20 bg-gradient-to-r from-indigo-50 to-pink-50">
+    <section className="py-20 bg-emerald-50">
       <div className="container mx-auto px-6">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-indigo-600 to-pink-600 bg-clip-text text-transparent mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-emerald-800 mb-4">
             Latest Insights
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -97,8 +97,8 @@ const LatestBlogs = () => {
                   }}
                   className={`w-full px-4 py-2 text-left rounded-full text-sm font-semibold transition-all duration-300 ${
                     selectedCategory === category
-                      ? "bg-purple-600 text-white shadow-lg shadow-purple-500/25 scale-105"
-                      : "bg-purple-100 text-purple-600 hover:bg-purple-200"
+                      ? "bg-emerald-600 text-white shadow-lg shadow-emerald-500/25 scale-105"
+                      : "bg-emerald-100 text-emerald-600 hover:bg-emerald-200"
                   }`}
                 >
                   {category}
@@ -115,8 +115,8 @@ const LatestBlogs = () => {
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${
                   selectedCategory === category
-                    ? "bg-purple-600 text-white shadow-lg shadow-purple-500/25 scale-105"
-                    : "bg-purple-100 text-purple-600 hover:bg-purple-200"
+                    ? "bg-emerald-600 text-white shadow-lg shadow-emerald-500/25 scale-105"
+                    : "bg-emerald-100 text-emerald-600 hover:bg-emerald-200"
                 }`}
               >
                 {category}
@@ -135,23 +135,23 @@ const LatestBlogs = () => {
                 key={index}
                 className="overflow-hidden rounded-2xl shadow-lg h-full flex flex-col"
               >
-                <div className="relative h-64 bg-purple-100 animate-pulse"></div>
+                <div className="relative h-64 bg-emerald-100 animate-pulse"></div>
                 <div className="p-6 bg-white flex flex-col flex-grow">
-                  <div className="h-6 bg-purple-100 rounded animate-pulse mb-4"></div>
-                  <div className="h-4 bg-purple-100 rounded animate-pulse mb-2"></div>
-                  <div className="h-4 bg-purple-100 rounded animate-pulse mb-2"></div>
-                  <div className="h-4 bg-purple-100 rounded animate-pulse mb-4 w-2/3"></div>
+                  <div className="h-6 bg-emerald-100 rounded animate-pulse mb-4"></div>
+                  <div className="h-4 bg-emerald-100 rounded animate-pulse mb-2"></div>
+                  <div className="h-4 bg-emerald-100 rounded animate-pulse mb-2"></div>
+                  <div className="h-4 bg-emerald-100 rounded animate-pulse mb-4 w-2/3"></div>
 
                   <div className="flex items-center gap-3 mb-4 mt-auto">
-                    <div className="w-10 h-10 rounded-full bg-purple-100 animate-pulse"></div>
+                    <div className="w-10 h-10 rounded-full bg-emerald-100 animate-pulse"></div>
                     <div className="flex-1">
-                      <div className="h-4 bg-purple-100 rounded animate-pulse mb-2"></div>
-                      <div className="h-3 bg-purple-100 rounded animate-pulse w-1/2"></div>
+                      <div className="h-4 bg-emerald-100 rounded animate-pulse mb-2"></div>
+                      <div className="h-3 bg-emerald-100 rounded animate-pulse w-1/2"></div>
                     </div>
                   </div>
                   <div className="flex justify-between">
-                    <div className="h-4 w-24 bg-purple-100 rounded animate-pulse"></div>
-                    <div className="h-4 w-24 bg-purple-100 rounded animate-pulse"></div>
+                    <div className="h-4 w-24 bg-emerald-100 rounded animate-pulse"></div>
+                    <div className="h-4 w-24 bg-emerald-100 rounded animate-pulse"></div>
                   </div>
                 </div>
               </article>
@@ -170,21 +170,21 @@ const LatestBlogs = () => {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                     <div className="absolute top-4 left-4">
-                      <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-white/90 text-purple-600 text-sm font-medium">
+                      <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-white/90 text-emerald-600 text-sm font-medium">
                         <Tag className="h-3 w-3" />
                         {blog.category.name}
                       </span>
                     </div>
                   </div>
                   <div className="relative p-6 bg-white flex flex-col flex-grow">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-purple-600 transition-colors">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-emerald-600 transition-colors">
                       {blog.title}
                     </h3>
                     <p className="text-gray-600 mb-4 flex-grow">
                       {blog.excerpt}
                     </p>
                     <div className="flex items-center gap-3 mb-3 sm:mb-4">
-                      <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-purple-100 flex items-center justify-center bg-purple-100 text-purple-600 font-semibold">
+                      <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-emerald-100 flex items-center justify-center bg-emerald-100 text-emerald-600 font-semibold">
                         {blog.author.full_name.charAt(0)}
                       </div>
                       <div>
@@ -198,11 +198,11 @@ const LatestBlogs = () => {
                     </div>
                     <div className="flex flex-wrap gap-3 items-center justify-between text-xs sm:text-sm text-gray-500">
                       <span className="flex items-center gap-1">
-                        <Calendar className="h-4 w-4" />
+                        <Calendar className="h-4 w-4 text-emerald-500" />
                         {moment(blog.published_at).format("ll")}
                       </span>
                       <span className="flex items-center gap-1">
-                        <Clock className="h-4 w-4" />
+                        <Clock className="h-4 w-4 text-emerald-500" />
                         {moment(blog.published_at).startOf("hour").fromNow()}
                       </span>
                     </div>

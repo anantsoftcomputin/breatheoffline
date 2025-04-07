@@ -2,59 +2,48 @@
 import Link from "next/link";
 import {
   ArrowRight,
-  Sparkles,
-  PhoneOff,
+  Leaf,
   Brain,
-  Moon,
+  Zap,
   Users,
   ShieldCheck,
+  Feather,
+  Sun,
 } from "lucide-react";
 
-const stats = [
+const coreBenefits = [
   {
-    icon: <PhoneOff className="h-6 w-6 text-purple-200" />,
-    bgColor: "bg-purple-600/20",
-    count: "30+",
-    label: "Digital Detox Ideas",
+    icon: <Brain className="h-5 w-5 text-emerald-600" />,
+    label: "Expert Mindfulness Guidance",
   },
   {
-    icon: <Moon className="h-6 w-6 text-indigo-200" />,
-    bgColor: "bg-indigo-600/20",
-    count: "500+",
-    label: "Mindful Tech Articles",
+    icon: <Zap className="h-5 w-5 text-emerald-600" />,
+    label: "Practical Detox Strategies",
   },
   {
-    icon: <Brain className="h-6 w-6 text-violet-200" />,
-    bgColor: "bg-violet-600/20",
-    count: "10+",
-    label: "Expert Contributors",
-  },
-  {
-    icon: <Users className="h-6 w-6 text-pink-200" />,
-    bgColor: "bg-pink-600/20",
-    count: "10K+",
-    label: "Transformed Lives",
+    icon: <Users className="h-5 w-5 text-emerald-600" />,
+    label: "Supportive Community",
   },
 ];
 
 const feature = [
   {
-    icon: <ShieldCheck className="h-6 w-6 text-purple-600" />,
-    bgColor: "bg-purple-100",
+    icon: <ShieldCheck className="h-6 w-6 text-emerald-600" />,
+    bgColor: "bg-emerald-100",
     title: "Digital Wellness Tools",
     description:
       "Apps and techniques to monitor and improve your digital habits.",
   },
   {
-    icon: <Brain className="h-6 w-6 text-purple-600" />,
-    bgColor: "bg-purple-100",
+    icon: <Brain className="h-6 w-6 text-emerald-600" />,
+    bgColor: "bg-emerald-100",
     title: "Mindfulness Practices",
     description:
       "Simple meditation and mindfulness exercises for digital balance.",
   },
   {
-    icon: <Users className="h-6 w-6 text-purple-600" />,
-    bgColor: "bg-purple-100",
+    icon: <Users className="h-6 w-6 text-emerald-600" />,
+    bgColor: "bg-emerald-100",
     title: "Community Support",
     description: "Connect with others on similar digital wellness journeys.",
   },
@@ -63,103 +52,148 @@ const feature = [
 const Hero = () => {
   return (
     <>
-      <section className="relative overflow-hidden bg-gradient-to-br from-purple-900 via-indigo-900 to-purple-900 py-20 lg:py-28">
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-purple-500/20 animate-float"></div>
-          <div className="absolute bottom-1/4 right-1/3 w-80 h-80 rounded-full bg-indigo-500/20 animate-float animation-delay-1000"></div>
-          <div className="absolute top-1/3 right-1/4 w-48 h-48 rounded-full bg-violet-500/20 animate-float animation-delay-2000"></div>
-
-          <div className="absolute top-20 left-20 w-28 h-28 border border-purple-300/30 rounded-lg rotate-12"></div>
-          <div className="absolute bottom-32 right-10 w-20 h-20 border border-purple-300/30 rounded-full -rotate-12"></div>
-          <div className="absolute top-1/2 right-1/4 w-16 h-16 border border-purple-300/30 rounded-md rotate-45"></div>
-          <div className="absolute inset-0 bg-grid-white/[0.05]"></div>
+      <section className="relative overflow-hidden bg-emerald-50 py-20 lg:py-28">
+        <div className="absolute inset-0 z-0 pointer-events-none opacity-80">
+          <Leaf
+            className="absolute text-emerald-200 floating-animation"
+            style={{
+              width: "45px",
+              height: "45px",
+              top: "10%",
+              left: "15%",
+              animationDuration: "8s",
+              animationDelay: "0s",
+              transform: "rotate(15deg)",
+            }}
+          />
+          <Brain
+            className="absolute text-emerald-200 floating-animation-alt"
+            style={{
+              width: "35px",
+              height: "35px",
+              top: "30%",
+              right: "10%",
+              animationDuration: "10s",
+              animationDelay: "1s",
+            }}
+          />
+          <Feather
+            className="absolute text-emerald-200 floating-animation"
+            style={{
+              width: "55px",
+              height: "55px",
+              top: "55%",
+              left: "5%",
+              animationDuration: "7s",
+              animationDelay: "2.5s",
+              transform: "rotate(-25deg)",
+            }}
+          />
+          <Zap
+            className="absolute text-emerald-200 floating-animation-alt"
+            style={{
+              width: "30px",
+              height: "30px",
+              bottom: "15%",
+              right: "20%",
+              animationDuration: "9s",
+              animationDelay: "4s",
+            }}
+          />
+          <Sun
+            className="absolute text-emerald-200 floating-animation"
+            style={{
+              width: "50px",
+              height: "50px",
+              bottom: "25%",
+              left: "30%",
+              animationDuration: "11s",
+              animationDelay: "5.5s",
+              transform: "rotate(5deg)",
+            }}
+          />
+          <Leaf
+            className="absolute text-emerald-200 floating-animation-alt"
+            style={{
+              width: "25px",
+              height: "25px",
+              top: "75%",
+              right: "8%",
+              animationDuration: "6s",
+              animationDelay: "1.5s",
+              transform: "rotate(60deg) scaleX(-1)",
+            }}
+          />
         </div>
-
-        <div className="relative container mx-auto px-6 pt-12 pb-12 text-center">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-white mb-6">
-              <Sparkles className="h-4 w-4 text-purple-200 mr-2" />
-              <span className="text-sm font-medium">
-                Digital Wellness Awaits
-              </span>
+        <div className="relative container mx-auto px-6 pt-12 pb-12 text-center z-10">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-emerald-100 border border-emerald-200 text-emerald-800 mb-6 shadow-sm">
+              <Leaf className="h-4 w-4 text-emerald-600 mr-2" />
+              <span className="text-sm font-medium">Mindful Tech Living</span>
             </div>
-
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 transform transition-all duration-700 delay-100">
-              Embrace the Art of Digital Free Life
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+              Rediscover Presence in a Connected World
             </h1>
-
-            <p className="text-lg md:text-xl text-purple-100 mb-8 max-w-2xl mx-auto transform transition-all duration-700 delay-200 opacity-100 -translate-y-4">
-              Discover mindful tech habits, expert strategies, and practical
-              guidance to free yourself from digital overwhelm while cultivating
-              a more intentional relationship with technology.
+            <p className="text-lg md:text-xl text-gray-700 mb-10 max-w-3xl mx-auto">
+              BreatheOffline is your guide to digital wellbeing. Explore mindful
+              strategies, expert insights, and community support to reduce
+              screen time, enhance focus, and reconnect with what truly matters.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex flex-wrap justify-center gap-4 mb-12">
               <Link
                 href="/blogs"
-                className="px-8 py-3 bg-purple-600 hover:bg-purple-700 text-white rounded-lg font-medium transition-all flex items-center"
+                className="px-8 py-3 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg font-medium transition-colors duration-300 flex items-center shadow hover:shadow-md"
               >
-                Explore Articles
+                Explore Strategies
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
-
               <Link
                 href="/aboutUs"
-                className="px-8 py-3 border border-purple-400/50 text-white rounded-lg font-medium hover:bg-purple-600/20 transition-all"
+                className="px-8 py-3 border border-emerald-600 text-emerald-700 rounded-lg font-medium hover:bg-emerald-100 transition-colors duration-300"
               >
-                About Us
+                Learn About Us
               </Link>
             </div>
-          </div>
-
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 mb-16">
-            {stats.map((stat, index) => (
-              <div
-                key={index}
-                className="text-center p-5 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:bg-white/10 transition-all duration-300"
-              >
-                <div
-                  className={`${stat.bgColor} p-3 rounded-full w-14 h-14 flex items-center justify-center mx-auto mb-4`}
-                >
-                  {stat.icon}
+            <div className="flex flex-col md:flex-row justify-center items-center gap-x-8 gap-y-4 text-gray-600">
+              {coreBenefits.map((benefit, index) => (
+                <div key={index} className="flex items-center gap-2">
+                  {benefit.icon}
+                  <span className="text-sm font-medium">{benefit.label}</span>
                 </div>
-                <div className="text-2xl font-bold text-white mb-1">
-                  {stat.count}
-                </div>
-                <div className="text-purple-200 text-sm">{stat.label}</div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>
-
-      <section id="content-section" className="py-16 bg-purple-50">
+      <section id="content-section" className="py-16 bg-white">
         <div className="container mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-indigo-600 to-pink-600 bg-clip-text text-transparent mb-4">
-              Digital Wellness Solutions
+            <h2 className="text-4xl md:text-5xl font-bold text-emerald-800 mb-4">
+              Your Digital Wellness Toolkit
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Simple tools and practices to help balance your digital life
+              Simple tools and practices to help you cultivate a healthier
+              relationship with technology.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-8xl mx-auto">
             {feature.map((feature, index) => (
               <div
                 key={index}
-                className="p-6 bg-white rounded-xl border border-purple-200/50 shadow-md hover:shadow-lg transition-all duration-300"
+                className="p-6 bg-white rounded-xl border border-emerald-200/60 shadow-sm hover:shadow-lg transition-all duration-300"
               >
                 <div
-                  className={`${feature.bgColor} p-3 rounded-lg w-12 h-12 flex items-center justify-center mb-4`}
+                  className={`${feature.bgColor} p-3 rounded-lg w-12 h-12 flex features-center justify-center mb-4`}
                 >
                   {feature.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-purple-600 mb-2">
+                <h3 className="text-xl font-semibold text-emerald-700 mb-2">
                   {feature.title}
                 </h3>
                 <p className="text-gray-600 mb-4">{feature.description}</p>
                 <Link
                   href="/blogs"
-                  className="inline-flex items-center text-gray-600 hover:text-purple-600 transition-colors"
+                  className="inline-flex items-center text-emerald-600 hover:text-emerald-800 transition-colors"
                 >
                   Learn more
                   <ArrowRight className="ml-1 h-4 w-4" />

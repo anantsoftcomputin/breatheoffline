@@ -11,8 +11,8 @@ export default function RelatedArticles({ relatedBlogs }) {
         className="mt-12"
       >
         <div className="flex items-center mb-6">
-          <Sparkles className="h-6 w-6 text-indigo-600 mr-3" />
-          <h2 className="text-3xl font-bold bg-gradient-to-r from-indigo-600 to-pink-600 bg-clip-text text-transparent">
+          <Sparkles className="h-6 w-6 text-emerald-600 mr-3" />
+          <h2 className="text-3xl font-bold bg-gradient-to-r from-emerald-600 to-emerald-600 bg-clip-text text-transparent">
             Related Articles
           </h2>
         </div>
@@ -31,7 +31,7 @@ export default function RelatedArticles({ relatedBlogs }) {
                     className="w-full h-full object-cover transition-transform hover:scale-105 duration-500"
                   />
                   <div className="absolute top-4 left-4">
-                    <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-white/90 text-purple-600 text-sm font-medium">
+                    <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-white/90 text-emerald-600 text-sm font-medium">
                       <Tag className="h-3 w-3" />
                       {relatedBlog.category.name}
                     </span>
@@ -39,7 +39,7 @@ export default function RelatedArticles({ relatedBlogs }) {
                 </div>
               )}
               <div className="p-4">
-                <h3 className="text-xl font-bold text-gray-900 mb-2 hover:text-purple-600 transition-colors">
+                <h3 className="text-xl font-bold text-gray-900 mb-2 hover:text-emerald-600 transition-colors">
                   {relatedBlog.title}
                 </h3>
                 <p className="text-gray-600">{relatedBlog.excerpt}</p>
