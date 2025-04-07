@@ -66,10 +66,10 @@ const LatestBlogs = () => {
     <section className="py-20 bg-emerald-50">
       <div className="container mx-auto px-6">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-emerald-800 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Latest Insights
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-700 max-w-2xl mx-auto">
             Discover our newest articles on digital wellness and mindful
             technology use
           </p>
@@ -95,10 +95,10 @@ const LatestBlogs = () => {
                     setSelectedCategory(category);
                     setIsCategoryOpen(false);
                   }}
-                  className={`w-full px-4 py-2 text-left rounded-full text-sm font-semibold transition-all duration-300 ${
+                  className={`inline-flex items-center justify-center px-6 py-2 rounded-full text-sm font-semibold transition-colors duration-300 border border-emerald-600  ${
                     selectedCategory === category
-                      ? "bg-emerald-600 text-white shadow-lg shadow-emerald-500/25 scale-105"
-                      : "bg-emerald-100 text-emerald-600 hover:bg-emerald-200"
+                      ? "bg-emerald-600 text-white shadow-lg shadow-emerald-500/25"
+                      : "bg-white text-emerald-600 hover:bg-emerald-50"
                   }`}
                 >
                   {category}
@@ -113,10 +113,10 @@ const LatestBlogs = () => {
               <button
                 key={category + index}
                 onClick={() => setSelectedCategory(category)}
-                className={`px-6 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${
+                className={`inline-flex items-center justify-center px-6 py-2 rounded-full text-sm font-semibold transition-colors duration-300 border border-emerald-600  ${
                   selectedCategory === category
-                    ? "bg-emerald-600 text-white shadow-lg shadow-emerald-500/25 scale-105"
-                    : "bg-emerald-100 text-emerald-600 hover:bg-emerald-200"
+                    ? "bg-emerald-600 text-white shadow-lg shadow-emerald-500/25"
+                    : "bg-white text-emerald-600 hover:bg-emerald-50"
                 }`}
               >
                 {category}

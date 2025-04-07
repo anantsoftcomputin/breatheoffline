@@ -38,7 +38,7 @@ const TrendingBlogs = () => {
                 Trending Now
               </span>
             </div>
-            <h3 className="text-3xl md:text-4xl font-bold text-emerald-800">
+            <h3 className="text-3xl md:text-4xl font-bold text-gray-900">
               Most Popular Articles
             </h3>
           </div>

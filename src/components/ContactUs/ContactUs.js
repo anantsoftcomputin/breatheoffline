@@ -55,10 +55,10 @@ const ContactUs = () => {
             <div className="inline-block border border-emerald-600 py-1 px-3 rounded-full bg-gradient-to-br from-emerald-700 via-emerald-600 to-emerald-700 bg-clip-text text-transparent font-medium text-sm mb-4">
               GET IN TOUCH
             </div>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-emerald-800 mb-4">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
               We're Here to Support Your Digital Wellness Journey
             </h1>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
               Have questions about digital detox or need personalized guidance?
               Our team is ready to help you create a healthier relationship with
               technology.
