@@ -5,7 +5,7 @@ export default function PrivacyPolicy() {
         <div className="absolute inset-0 bg-grid-white/[0.05]" />
         <div className="relative max-w-7xl mx-auto">
           <div className="text-center mb-8">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-indigo-600 to-pink-600 bg-clip-text text-transparent">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-emerald-600 to-emerald-600 bg-clip-text text-transparent">
               Privacy Policy
             </h1>
           </div>
@@ -352,7 +352,7 @@ export default function PrivacyPolicy() {
                   For any questions or concerns about this Privacy Policy,
                   please contact us:
                 </p>
-                <p className="mt-2 text-purple-600">
+                <p className="mt-2 text-emerald-600">
                   Email: support@breatheoffline.com
                   <br />
                   Contact: Available on breatheoffline.com

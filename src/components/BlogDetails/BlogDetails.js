@@ -422,16 +422,16 @@ export default function BlogDetails({ slug }) {
   };
 
   return (
-    <main className="h-screen flex flex-col bg-gradient-to-r from-indigo-50/30 to-pink-50/30 overflow-hidden pt-16">
+    <main className="h-screen flex flex-col bg-gray-50 overflow-hidden pt-16">
       <div className="fixed top-0 left-0 w-full z-50 h-1 bg-transparent">
         <div
-          className="h-full bg-gradient-to-r from-indigo-600 to-pink-600"
+          className="h-full bg-emerald-600 transition-width duration-150 ease-linear"
           style={{ width: `${readingProgress}%` }}
         />
       </div>
       <button
         onClick={() => setIsAudioPlayerOpen(!isAudioPlayerOpen)}
-        className="fixed bottom-20 right-6 z-50 p-3 rounded-full bg-gradient-to-r from-indigo-600 to-pink-600 hover:from-indigo-700 hover:to-pink-700 text-white shadow-lg transition-colors"
+        className="fixed bottom-20 right-6 z-50 p-3 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white shadow-lg transition-colors"
       >
         <Headphones className="h-5 w-5" />
       </button>
@@ -441,11 +441,11 @@ export default function BlogDetails({ slug }) {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 20 }}
           transition={{ duration: 0.3 }}
-          className="fixed bottom-32 right-6 w-80 z-50 rounded-lg bg-gradient-to-br from-indigo-50 to-pink-50 p-6 shadow-md"
+          className="fixed bottom-32 right-6 w-80 z-50 rounded-lg bg-white p-6 shadow-md border border-gray-200"
         >
           <div className="flex justify-between items-center mb-3">
             <h3 className="text-lg text-gray-900 font-medium flex items-center">
-              <Headphones className="w-4 h-4 bg-gradient-to-r from-indigo-600 to-pink-600 bg-clip-text text-transparent mr-2" />
+              <Headphones className="w-4 h-4 text-emerald-600 mr-2" />
               Listen to Article
             </h3>
             <button
@@ -465,7 +465,7 @@ export default function BlogDetails({ slug }) {
               className={`p-2 rounded-full ${
                 currentSectionIndex <= 0 || !speechSections.length
                   ? "text-gray-400 bg-gray-100"
-                  : "text-gray-900 bg-gradient-to-r from-indigo-50 to-pink-50 hover:from-indigo-100 hover:to-pink-100 transition-colors"
+                  : "text-gray-900 bg-gradient-to-r from-emerald-50 to-emerald-50 hover:from-emerald-100 hover:to-emerald-100 transition-colors"
               }`}
             >
               <SkipBack className="w-4 h-4" />
@@ -473,12 +473,12 @@ export default function BlogDetails({ slug }) {
             <button
               onClick={handlePlay}
               disabled={!speechSections.length}
-              className="p-3 rounded-full bg-gradient-to-r from-indigo-600 to-pink-600 text-white hover:from-indigo-700 hover:to-pink-700 transition-colors"
+              className="p-3 rounded-full bg-gradient-to-r from-emerald-600 to-emerald-600 text-white hover:from-emerald-700 hover:to-emerald-700 transition-colors"
             >
               {isPlaying ? (
-                <Pause className="w-5 h-5" />
+                <Pause className="w-5 h-5 fill-white" />
               ) : (
-                <Play className="w-5 h-5" />
+                <Play className="w-5 h-5 fill-white" />
               )}
             </button>
             <button
@@ -487,7 +487,7 @@ export default function BlogDetails({ slug }) {
               className={`p-2 rounded-full ${
                 !isPlaying
                   ? "text-gray-400 bg-gray-100"
-                  : "text-gray-900 bg-gradient-to-r from-indigo-50 to-pink-50 hover:from-indigo-100 hover:to-pink-100 transition-colors"
+                  : "text-gray-900 bg-gradient-to-r from-emerald-50 to-emerald-50 hover:from-emerald-100 hover:to-emerald-100 transition-colors"
               }`}
             >
               <Square className="w-4 h-4" />
@@ -502,13 +502,13 @@ export default function BlogDetails({ slug }) {
                 currentSectionIndex >= speechSections.length - 1 ||
                 !speechSections.length
                   ? "text-gray-400 bg-gray-100"
-                  : "text-gray-900 bg-gradient-to-r from-indigo-50 to-pink-50 hover:from-indigo-100 hover:to-pink-100 transition-colors"
+                  : "text-gray-900 bg-gradient-to-r from-emerald-50 to-emerald-50 hover:from-emerald-100 hover:to-emerald-100 transition-colors"
               }`}
             >
               <SkipForward className="w-4 h-4" />
             </button>
           </div>
-          <div className="flex items-center mb-3 text-sm text-gray-600">
+          <div className="flex items-center justify-center mb-3 text-sm text-gray-600">
             <span className="mr-2">Section:</span>
             <span>
               {currentSectionIndex + 1} / {speechSections.length}
@@ -519,7 +519,7 @@ export default function BlogDetails({ slug }) {
             <select
               value={selectedVoice}
               onChange={handleVoiceChange}
-              className="w-full p-2 text-sm border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              className="w-full p-2 text-sm bg-white border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500"
             >
               {voices.map((voice) => (
                 <option key={voice.name} value={voice.name}>
@@ -542,7 +542,7 @@ export default function BlogDetails({ slug }) {
               step="0.1"
               value={speechRate}
               onChange={handleRateChange}
-              className="w-full accent-indigo-600"
+              className="w-full accent-emerald-600"
             />
           </div>
           <div>
@@ -559,7 +559,7 @@ export default function BlogDetails({ slug }) {
               step="0.1"
               value={speechVolume}
               onChange={handleVolumeChange}
-              className="w-full accent-indigo-600"
+              className="w-full accent-emerald-600"
             />
           </div>
         </motion.div>
@@ -571,10 +571,10 @@ export default function BlogDetails({ slug }) {
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className="bg-gradient-to-br from-indigo-50 to-pink-50 rounded-xl p-6 mb-6 shadow-md"
+              className="bg-gradient-to-br from-emerald-50 to-emerald-50 rounded-xl p-6 mb-6 shadow-md"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
-                <Sparkles className="h-4 w-4 text-indigo-600 mr-2" />
+                <Sparkles className="h-4 w-4 text-emerald-600 mr-2" />
                 Table of Contents
               </h3>
               <div className="max-h-[calc(100vh-24rem)] overflow-y-auto pr-2">
@@ -583,9 +583,9 @@ export default function BlogDetails({ slug }) {
                     <li key={heading.id}>
                       <button
                         onClick={() => scrollToHeading(heading.id)}
-                        className="flex items-center w-full px-2 py-1.5 text-sm text-gray-600 hover:text-purple-600 hover:bg-purple-50/20 rounded transition-colors"
+                        className="flex items-center w-full px-2 py-1.5 text-sm text-gray-600 hover:text-emerald-600 hover:bg-emerald-50/20 rounded transition-colors"
                       >
-                        <ArrowRight className="h-3 w-3 text-indigo-600 mr-2 flex-shrink-0" />
+                        <ArrowRight className="h-3 w-3 text-emerald-600 mr-2 flex-shrink-0" />
                         <span className="truncate">{heading.title}</span>
                       </button>
                     </li>
@@ -594,12 +594,12 @@ export default function BlogDetails({ slug }) {
               </div>
               <div className="mt-6 pt-4 border-t border-gray-200">
                 <h4 className="text-base font-medium text-gray-900 mb-3 flex items-center">
-                  <Headphones className="h-4 w-4 bg-gradient-to-r from-indigo-600 to-pink-600 bg-clip-text text-transparent mr-2" />
+                  <Headphones className="h-4 w-4 bg-gradient-to-r from-emerald-600 to-emerald-emerald bg-clip-text text-transparent mr-2" />
                   Listen to Article
                 </h4>
                 <button
                   onClick={handlePlay}
-                  className="w-full flex items-center justify-center gap-2 py-2 text-sm rounded-lg bg-gradient-to-r from-indigo-600 to-pink-600 text-white hover:from-indigo-700 hover:to-pink-700 transition-colors mb-4"
+                  className="w-full flex items-center justify-center gap-2 py-2 text-sm rounded-lg bg-gradient-to-r from-emerald-600 to-emerald-600 text-white hover:from-emerald-700 hover:to-emerald-700 transition-colors mb-4"
                 >
                   {isPlaying ? (
                     <Pause className="h-4 w-4" />
@@ -613,9 +613,9 @@ export default function BlogDetails({ slug }) {
                     <span>Reading progress</span>
                     <span>{Math.round(readingProgress)}%</span>
                   </div>
-                  <div className="h-2 w-full bg-indigo-50/30 rounded-full">
+                  <div className="h-2 w-full bg-emerald-50/30 rounded-full">
                     <div
-                      className="h-full bg-gradient-to-r from-indigo-600 to-pink-600 rounded-full"
+                      className="h-full bg-gradient-to-r from-emerald-600 to-emerald-600 rounded-full"
                       style={{ width: `${readingProgress}%` }}
                     ></div>
                   </div>
@@ -637,7 +637,7 @@ export default function BlogDetails({ slug }) {
                 className="space-y-4"
               >
                 <div className="flex flex-wrap items-center gap-3 text-sm">
-                  <span className="px-3 py-1 rounded-full bg-gradient-to-r from-indigo-600 to-pink-600 text-white font-medium">
+                  <span className="px-3 py-1 rounded-full bg-gradient-to-r from-emerald-600 to-emerald-600 text-white font-medium">
                     {blog.category?.name}
                   </span>
                   <div className="flex items-center gap-1 text-gray-600">
@@ -655,7 +655,7 @@ export default function BlogDetails({ slug }) {
                     <span>{blog.view_count} views</span>
                   </div>
                 </div>
-                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-indigo-600 to-pink-600 bg-clip-text text-transparent">
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-emerald-600 to-emerald-600 bg-clip-text text-transparent">
                   {blog.title}
                 </h1>
                 <p className="text-xl text-gray-600">{blog.excerpt}</p>
@@ -681,7 +681,7 @@ export default function BlogDetails({ slug }) {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.4 }}
                 dangerouslySetInnerHTML={{ __html: blog.content }}
-                className="p-6 prose max-w-none bg-gradient-to-br from-indigo-50 to-pink-50 rounded-xl shadow-md"
+                className="p-6 prose max-w-none bg-gradient-to-br from-emerald-50 to-emerald-50 rounded-xl shadow-md"
               />
             </div>
             <RelatedArticles relatedBlogs={relatedBlogs} />
@@ -695,15 +695,15 @@ export default function BlogDetails({ slug }) {
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="bg-gradient-to-br from-indigo-50 to-pink-50 rounded-xl p-6 mb-6 shadow-md"
+            className="bg-gradient-to-br from-emerald-50 to-emerald-50 rounded-xl p-6 mb-6 shadow-md"
           >
             <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
-              <Sparkles className="h-4 w-4 text-indigo-600 mr-2" />
-              Share this article
+              <Sparkles className="h-4 w-4 text-emerald-600 mr-2" />
+              Share This Article
             </h3>
             <div className="grid grid-cols-3 gap-3">
               <button
-                className="flex flex-col items-center justify-center p-3 rounded-lg bg-[#1877F2]/10 text-[#1877F2] hover:bg-[#1877F2]/20 transition-colors"
+                className="flex flex-col items-center justify-center p-3 rounded-lg bg-[#4267B2]/10 text-[#4267B2] hover:bg-[#4267B2]/20 transition-colors"
                 onClick={() =>
                   window.open(
                     "https://www.facebook.com/people/BreatheOffline-Travel/61571280080816/",
@@ -724,7 +724,7 @@ export default function BlogDetails({ slug }) {
                 <span className="text-xs">Twitter</span>
               </button>
               <button
-                className="flex flex-col items-center justify-center p-3 rounded-lg bg-[#0A66C2]/10 text-[#0A66C2] hover:bg-[#0A66C2]/20 transition-colors"
+                className="flex flex-col items-center justify-center p-3 rounded-lg bg-[#E1306C]/10 text-[#E1306C] hover:bg-[#E1306C]/20 transition-colors"
                 onClick={() =>
                   window.open(
                     "https://www.instagram.com/breatheoffline/",
@@ -742,17 +742,17 @@ export default function BlogDetails({ slug }) {
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
-              className="bg-gradient-to-br from-indigo-50 to-pink-50 rounded-xl p-6 shadow-md mb-6"
+              className="bg-gradient-to-br from-emerald-50 to-emerald-50 rounded-xl p-6 shadow-md mb-6"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
-                <Tag className="h-4 w-4 text-indigo-600 mr-2" />
+                <Tag className="h-4 w-4 text-emerald-600 mr-2" />
                 Tags
               </h3>
               <div className="flex flex-wrap gap-2">
                 {blog.tags.map((tag, index) => (
                   <span
                     key={index}
-                    className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-white/80 text-indigo-600 text-sm font-medium hover:shadow-md transition-shadow"
+                    className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-emerald-100 text-emerald-700 text-sm font-medium"
                   >
                     <Tag className="h-3 w-3" />
                     {tag.name}
@@ -766,13 +766,13 @@ export default function BlogDetails({ slug }) {
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.5 }}
-              className="bg-gradient-to-br from-indigo-50 to-pink-50 rounded-xl p-6 shadow-md"
+              className="bg-gradient-to-br from-emerald-50 to-emerald-50 rounded-xl p-6 shadow-md"
             >
               <h3 className="text-lg font-semibold text-gray-900 mb-4">
-                About the Author
+                About The Author
               </h3>
               <div className="flex flex-col items-center text-center">
-                <div className="w-20 h-20 rounded-full bg-gradient-to-br from-indigo-600 to-pink-600 flex items-center justify-center text-white text-2xl font-semibold mb-3">
+                <div className="w-20 h-20 rounded-full bg-gradient-to-br from-emerald-600 to-emerald-600 flex items-center justify-center text-white text-2xl font-semibold mb-3">
                   {blog.author.full_name.charAt(0)}
                 </div>
                 <h4 className="text-xl font-semibold text-gray-900">

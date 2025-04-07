@@ -146,8 +146,8 @@ export default function Blog() {
                 onClick={() => paginate(1)}
                 className={`w-10 h-10 rounded-full ${
                   currentPage === 1
-                    ? "bg-purple-600 text-white"
-                    : "bg-white text-gray-600 hover:bg-purple-50"
+                    ? "bg-emerald-600 text-white"
+                    : "bg-white text-gray-600 hover:bg-emerald-50"
                 } shadow-md`}
               >
                 1
@@ -165,8 +165,8 @@ export default function Blog() {
               onClick={() => paginate(startPage + i)}
               className={`w-10 h-10 rounded-full ${
                 currentPage === startPage + i
-                  ? "bg-purple-600 text-white"
-                  : "bg-white text-gray-600 hover:bg-purple-50"
+                  ? "bg-emerald-600 text-white"
+                  : "bg-white text-gray-600 hover:bg-emerald-50"
               } shadow-md`}
             >
               {startPage + i}
@@ -183,8 +183,8 @@ export default function Blog() {
                 onClick={() => paginate(totalPages)}
                 className={`w-10 h-10 rounded-full ${
                   currentPage === totalPages
-                    ? "bg-purple-600 text-white"
-                    : "bg-white text-gray-600 hover:bg-purple-50"
+                    ? "bg-emerald-600 text-white"
+                    : "bg-white text-gray-600 hover:bg-emerald-50"
                 } shadow-md`}
               >
                 {totalPages}
@@ -206,7 +206,7 @@ export default function Blog() {
 
   return (
     <main className="py-10 min-h-screen">
-      <section className="relative py-20 bg-gradient-to-br from-purple-900 via-indigo-900 to-purple-900">
+      <section className="relative py-20 bg-gradient-to-br from-emerald-700 via-emerald-600 to-emerald-700">
         <div className="absolute inset-0 bg-grid-white/[0.05]" />
         <div className="absolute -inset-x-0 top-0 h-40 bg-[url('/pattern-light.svg')] opacity-10" />
         <div className="absolute -inset-x-0 bottom-0 h-40 bg-[url('/pattern-light.svg')] opacity-10" />
@@ -220,7 +220,7 @@ export default function Blog() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
               Explore Our Blog
             </h1>
-            <p className="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-emerald-100 mb-8 max-w-2xl mx-auto">
               Discover insights and strategies for maintaining digital wellness
               in today's connected world.
             </p>
@@ -236,9 +236,9 @@ export default function Blog() {
                   placeholder="Search blogs..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-12 pr-4 py-4 md:py-5 rounded-full bg-white/10 backdrop-blur-sm text-white placeholder-purple-200 border border-white/20 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:bg-white/20 transition-all duration-300"
+                  className="w-full pl-12 pr-4 py-4 md:py-5 rounded-full bg-white/10 backdrop-blur-sm text-white placeholder-emerald-200 border border-white/20 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:bg-white/20 transition-all duration-300"
                 />
-                <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-purple-200" />
+                <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-emerald-200" />
                 {searchQuery && (
                   <button
                     onClick={() => setSearchQuery("")}
@@ -259,7 +259,7 @@ export default function Blog() {
                     onClick={() => setViewMode("grid")}
                     className={`px-4 py-1 rounded-full text-sm ${
                       viewMode === "grid"
-                        ? "bg-white text-purple-900"
+                        ? "bg-white text-emerald-900"
                         : "text-white"
                     } transition-all duration-300`}
                   >
@@ -269,7 +269,7 @@ export default function Blog() {
                     onClick={() => setViewMode("list")}
                     className={`px-4 py-1 rounded-full text-sm ${
                       viewMode === "list"
-                        ? "bg-white text-purple-900"
+                        ? "bg-white text-emerald-900"
                         : "text-white"
                     } transition-all duration-300`}
                   >
@@ -307,8 +307,8 @@ export default function Blog() {
                       }}
                       className={`w-full px-4 py-2 text-left rounded-full text-sm font-semibold transition-all duration-300 ${
                         selectedCategory === category
-                          ? "bg-purple-600 text-white shadow-lg shadow-purple-500/25 scale-105"
-                          : "bg-purple-100 text-purple-600 hover:bg-purple-200"
+                          ? "bg-emerald-600 text-white shadow-lg shadow-emerald-500/25 scale-105"
+                          : "bg-emerald-100 text-emerald-600 hover:bg-emerald-200"
                       }`}
                     >
                       {category}
@@ -324,8 +324,8 @@ export default function Blog() {
                   onClick={() => setSelectedCategory(category)}
                   className={`px-6 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${
                     selectedCategory === category
-                      ? "bg-purple-600 text-white shadow-lg shadow-purple-500/25 scale-105"
-                      : "bg-purple-100 text-purple-600 hover:bg-purple-200"
+                      ? "bg-emerald-600 text-white shadow-lg shadow-emerald-500/25 scale-105"
+                      : "bg-emerald-100 text-emerald-600 hover:bg-emerald-200"
                   }`}
                 >
                   {category}
@@ -338,7 +338,7 @@ export default function Blog() {
       {!searchQuery && selectedCategory === "All" && featuredBlog && (
         <section className="container mx-auto px-4 sm:px-6 py-12">
           <div className="flex items-center gap-2 mb-6">
-            <Sparkles className="h-5 w-5 text-purple-600" />
+            <Sparkles className="h-5 w-5 text-emerald-600" />
             <h2 className="text-2xl font-bold text-gray-900">Featured Post</h2>
           </div>
           <Link href={`/${featuredBlog.slug}`}>
@@ -355,7 +355,7 @@ export default function Blog() {
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute top-4 left-4">
-                    <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-white/90 text-purple-600 text-sm font-medium">
+                    <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-white/90 text-emerald-600 text-sm font-medium">
                       <Tag className="h-3 w-3" />
                       {featuredBlog.category.name}
                     </span>
@@ -363,7 +363,7 @@ export default function Blog() {
                 </div>
 
                 <div className="md:w-1/2 p-6 md:p-8 bg-white flex flex-col">
-                  <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3 hover:text-purple-600">
+                  <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3 hover:text-emerald-600">
                     {featuredBlog.title}
                   </h2>
                   <p className="text-gray-600 text-lg mb-4 line-clamp-3">
@@ -374,7 +374,7 @@ export default function Blog() {
                     {featuredBlog.tags.slice(0, 3).map((tag, index) => (
                       <span
                         key={index}
-                        className="px-3 py-1 bg-purple-50 text-purple-600 rounded-full text-sm"
+                        className="px-3 py-1 bg-emerald-50 text-emerald-600 rounded-full text-sm"
                       >
                         {tag.name}
                       </span>
@@ -383,7 +383,7 @@ export default function Blog() {
 
                   <div className="mt-auto">
                     <div className="flex items-center gap-3 mb-4">
-                      <div className="w-10 h-10 rounded-full border-2 border-purple-100 flex items-center justify-center bg-purple-100 text-purple-600 font-semibold">
+                      <div className="w-10 h-10 rounded-full border-2 border-emerald-100 flex items-center justify-center bg-emerald-100 text-emerald-600 font-semibold">
                         {featuredBlog.author.full_name.charAt(0)}
                       </div>
                       <div>
@@ -398,11 +398,11 @@ export default function Blog() {
 
                     <div className="flex items-center justify-between">
                       <span className="flex items-center gap-1 text-sm text-gray-500">
-                        <BookCheck className="h-4 w-4 text-pink-500" />
+                        <BookCheck className="h-4 w-4 text-emerald-500" />
                         {featuredBlog.estimated_reading_time} min read
                       </span>
 
-                      <button className="inline-flex items-center gap-1 px-4 py-2 bg-purple-100 rounded-full text-purple-600 text-sm font-medium hover:bg-purple-200 transition-colors">
+                      <button className="inline-flex items-center gap-1 px-4 py-2 bg-emerald-100 rounded-full text-emerald-600 text-sm font-medium hover:bg-emerald-200 transition-colors">
                         Read Article <ChevronRight className="h-4 w-4 ml-1" />
                       </button>
                     </div>
@@ -416,7 +416,7 @@ export default function Blog() {
       <section className="container mx-auto px-4 sm:px-6 py-12">
         <div className="flex items-center justify-between mb-6">
           <h2 className="text-2xl font-bold text-gray-900 flex items-center gap-2">
-            <BookOpen className="h-5 w-5 text-purple-600" />
+            <BookOpen className="h-5 w-5 text-emerald-600" />
             {searchQuery
               ? `Search Results for "${searchQuery}"`
               : selectedCategory !== "All"
@@ -512,7 +512,7 @@ export default function Blog() {
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                       />
                       <div className="absolute top-4 left-4">
-                        <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-white/90 text-purple-600 text-sm font-medium">
+                        <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-white/90 text-emerald-600 text-sm font-medium">
                           <Tag className="h-3 w-3" />
                           {blog.category.name}
                         </span>
@@ -524,7 +524,7 @@ export default function Blog() {
                         viewMode === "list" ? "md:w-2/3" : ""
                       }`}
                     >
-                      <h2 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-purple-600 transition-colors">
+                      <h2 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-emerald-600 transition-colors">
                         {blog.title}
                       </h2>
 
@@ -550,7 +550,7 @@ export default function Blog() {
 
                       <div className="mt-auto">
                         <div className="flex items-center gap-3 mb-3">
-                          <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-purple-100 flex items-center justify-center bg-purple-100 text-purple-600 font-semibold">
+                          <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-emerald-100 flex items-center justify-center bg-emerald-100 text-emerald-600 font-semibold">
                             {blog.author.full_name.charAt(0)}
                           </div>
                           <div>
@@ -565,12 +565,12 @@ export default function Blog() {
 
                         <div className="flex flex-wrap gap-3 items-center justify-between text-xs sm:text-sm text-gray-500">
                           <span className="flex items-center gap-1">
-                            <BookCheck className="h-3 w-3 sm:h-4 sm:w-4 text-pink-500" />
+                            <BookCheck className="h-3 w-3 sm:h-4 sm:w-4 text-emerald-500" />
                             {blog.estimated_reading_time} min read
                           </span>
 
                           <span className="flex items-center gap-1">
-                            <Clock className="h-3 w-3 sm:h-4 sm:w-4" />
+                            <Clock className="h-3 w-3 sm:h-4 sm:w-4 text-emerald-500" />
                             {moment(blog.published_at)
                               .startOf("hour")
                               .fromNow()}
@@ -590,15 +590,15 @@ export default function Blog() {
             animate={{ opacity: 1 }}
             className="text-center py-12"
           >
-            <div className="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Search className="h-8 w-8 text-purple-600" />
+            <div className="w-20 h-20 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Search className="h-8 w-8 text-emerald-600" />
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-2">
               No Articles Found
             </h3>
             <button
               onClick={clearFilters}
-              className="px-6 py-2 bg-purple-600 text-white rounded-full hover:bg-purple-700 transition-colors"
+              className="px-6 py-2 bg-emerald-600 text-white rounded-full hover:bg-emerald-700 transition-colors"
             >
               Clear Filters
             </button>

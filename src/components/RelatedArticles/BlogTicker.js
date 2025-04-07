@@ -40,7 +40,7 @@ const tickerStyles = `
 export default function BlogTicker({ relatedBlogs }) {
   return (
     relatedBlogs.length > 0 && (
-      <div className="bg-gradient-to-r from-indigo-50 to-pink-50 text-gray-800 py-2 overflow-hidden shadow-md">
+      <div className="bg-gradient-to-r from-emerald-50 to-emerald-50 text-gray-800 py-2 overflow-hidden shadow-md">
         <style>{tickerStyles}</style>
         <div className="flex animate-ticker">
           {relatedBlogs.concat(relatedBlogs).map((blog, index) => (

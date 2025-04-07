@@ -16,26 +16,26 @@ const stats = [
   {
     number: "10K+",
     label: "Community Members",
-    icon: <Users className="h-6 w-6 text-purple-600" />,
-    bgColor: "bg-purple-100",
+    icon: <Users className="h-6 w-6 text-emerald-600" />,
+    bgColor: "bg-emerald-100",
   },
   {
     number: "500+",
     label: "Success Stories",
-    icon: <Heart className="h-6 w-6 text-purple-600" />,
-    bgColor: "bg-purple-100",
+    icon: <Heart className="h-6 w-6 text-emerald-600" />,
+    bgColor: "bg-emerald-100",
   },
   {
     number: "50+",
     label: "Expert Contributors",
-    icon: <BookOpen className="h-6 w-6 text-purple-600" />,
-    bgColor: "bg-purple-100",
+    icon: <BookOpen className="h-6 w-6 text-emerald-600" />,
+    bgColor: "bg-emerald-100",
   },
   {
     number: "15+",
     label: "Digital Detox Tools",
-    icon: <Wrench className="h-6 w-6 text-purple-600" />,
-    bgColor: "bg-purple-100",
+    icon: <Wrench className="h-6 w-6 text-emerald-600" />,
+    bgColor: "bg-emerald-100",
   },
 ];
 
@@ -90,14 +90,14 @@ const AboutUs = () => {
 
   return (
     <main className="pt-12 min-h-screen bg-gray-50">
-      <section className="relative py-20 bg-gradient-to-br from-purple-900 via-indigo-900 to-purple-900">
+      <section className="relative py-20 bg-gradient-to-br from-emerald-700 via-emerald-600 to-emerald-700">
         <div className="absolute inset-0 bg-grid-white/[0.05]" />
         <div className="relative container mx-auto px-6">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Welcome to BreatheOffline
             </h1>
-            <p className="text-xl text-purple-100 mb-8">
+            <p className="text-xl text-emerald-100 mb-8">
               Your sanctuary for rediscovering balance in the digital age. We
               empower individuals to take control of their screen time and
               cultivate healthier, more fulfilling lives offline.
@@ -111,7 +111,7 @@ const AboutUs = () => {
             {stats.map((stat, index) => (
               <div
                 key={stat.label + index}
-                className={`text-center p-6 bg-purple-50 rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-2 ${
+                className={`text-center p-6 bg-emerald-50 rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-2 ${
                   isVisible
                     ? "opacity-100 translate-y-0"
                     : "opacity-0 translate-y-10"
@@ -123,7 +123,7 @@ const AboutUs = () => {
                 >
                   {stat.icon}
                 </div>
-                <div className="text-3xl font-bold text-purple-600 mb-2">
+                <div className="text-3xl font-bold text-emerald-600 mb-2">
                   {stat.number}
                 </div>
                 <div className="text-gray-800 font-medium">{stat.label}</div>
@@ -132,7 +132,7 @@ const AboutUs = () => {
           </div>
         </div>
       </section>
-      <section className="py-20 bg-purple-100">
+      <section className="py-20 bg-emerald-100">
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div
@@ -142,7 +142,7 @@ const AboutUs = () => {
                   : "opacity-0 -translate-x-10"
               }`}
             >
-              <h3 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-indigo-600 to-pink-600 bg-clip-text text-transparent mb-6">
+              <h3 className="text-3xl md:text-4xl font-bold text-emerald-800 text-transparent mb-6">
                 Our Mission
               </h3>
               <p className="text-gray-800 text-lg mb-8">
@@ -156,12 +156,12 @@ const AboutUs = () => {
                 {values.map((value, index) => (
                   <div key={index} className="flex gap-4 items-start">
                     <div className="flex-shrink-0">
-                      <div className="w-12 h-12 rounded-lg bg-purple-100 flex items-center justify-center">
-                        <value.icon className="h-6 w-6 text-purple-600" />
+                      <div className="w-12 h-12 rounded-lg bg-emerald-100 flex items-center justify-center">
+                        <value.icon className="h-6 w-6 text-emerald-600" />
                       </div>
                     </div>
                     <div>
-                      <h3 className="text-xl font-semibold text-purple-600 mb-2">
+                      <h3 className="text-xl font-semibold text-emerald-600 mb-2">
                         {value.title}
                       </h3>
                       <p className="text-gray-600">{value.description}</p>
@@ -183,17 +183,17 @@ const AboutUs = () => {
                   alt="Team Meeting"
                   className="w-full h-auto rounded-2xl object-cover transition-all duration-700 hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-purple-900/50 to-transparent opacity-60"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-emerald-900/50 to-transparent opacity-60"></div>
               </div>
-              <div className="absolute -bottom-6 -left-6 w-48 h-48 bg-purple-200 rounded-2xl -z-10 opacity-50 blur-lg"></div>
-              <div className="absolute -top-6 -right-6 w-32 h-32 bg-indigo-200 rounded-full -z-10 opacity-50 blur-lg"></div>
+              <div className="absolute -bottom-6 -left-6 w-48 h-48 bg-emerald-200 rounded-2xl -z-10 opacity-50 blur-lg"></div>
+              <div className="absolute -top-6 -right-6 w-32 h-32 bg-emerald-200 rounded-full -z-10 opacity-50 blur-lg"></div>
             </div>
           </div>
         </div>
       </section>
       <section className="py-20 bg-white">
         <div className="container mx-auto px-6">
-          <h2 className="text-center text-4xl md:text-5xl font-bold bg-gradient-to-r from-indigo-600 to-pink-600 bg-clip-text text-transparent mb-4">
+          <h2 className="text-center text-4xl md:text-5xl font-bold text-emerald-800 text-transparent mb-4">
             What We Offer
           </h2>
           <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
@@ -204,23 +204,23 @@ const AboutUs = () => {
             {resources.map((resource, index) => (
               <div
                 key={index}
-                className={`bg-purple-50 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 border border-purple-100 ${
+                className={`bg-emerald-50 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 border border-emerald-100 ${
                   isVisible
                     ? "opacity-100 translate-y-0"
                     : "opacity-0 translate-y-10"
                 }`}
                 style={{ transitionDelay: `${index * 100 + 300}ms` }}
               >
-                <div className="w-14 h-14 rounded-lg bg-purple-100 flex items-center justify-center mb-5">
-                  <resource.icon className="h-7 w-7 text-purple-600" />
+                <div className="w-14 h-14 rounded-lg bg-emerald-100 flex items-center justify-center mb-5">
+                  <resource.icon className="h-7 w-7 text-emerald-600" />
                 </div>
-                <h3 className="text-xl font-semibold text-purple-600 mb-3">
+                <h3 className="text-xl font-semibold text-emerald-600 mb-3">
                   {resource.title}
                 </h3>
                 <p className="text-gray-600 mb-5">{resource.description}</p>
                 <Link
                   href="/blogs"
-                  className="inline-flex items-center text-gray-600 hover:text-purple-600 font-medium transition-colors"
+                  className="inline-flex items-center text-gray-600 hover:text-emerald-600 font-medium transition-colors"
                 >
                   Learn more
                   <svg
@@ -243,16 +243,16 @@ const AboutUs = () => {
           </div>
         </div>
       </section>
-      <section className="py-20 bg-gradient-to-br from-purple-900 via-indigo-900 to-purple-900">
+      <section className="py-20 bg-gradient-to-br from-emerald-900 via-emerald-800 to-emerald-900">
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-3xl font-bold text-white mb-6">
             Join Us on the Journey
           </h2>
-          <p className="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-emerald-100 mb-8 max-w-2xl mx-auto">
             Together, we can unplug and thrive. Start your digital detox journey
             today and rediscover the beauty of living in the present moment.
           </p>
-          <button className="bg-white text-purple-900 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors duration-300">
+          <button className="bg-white text-emerald-900 px-8 py-3 rounded-lg font-semibold hover:bg-emerald-50 transition-colors duration-300">
             Get Started
           </button>
         </div>

@@ -48,7 +48,7 @@ export default function CategoriesBlogs({ slug }) {
 
   return (
     <main className="py-12 min-h-screen">
-      <section className="relative py-20 bg-gradient-to-br from-purple-900 via-indigo-900 to-purple-900">
+      <section className="relative py-20 bg-gradient-to-br from-emerald-700 via-emerald-600 to-emerald-700">
         <div className="absolute inset-0 bg-grid-white/[0.05]" />
         <div className="relative container mx-auto px-6">
           <div className="max-w-3xl mx-auto text-center">
@@ -58,7 +58,7 @@ export default function CategoriesBlogs({ slug }) {
                 .replace(/\b\w/g, (char) => char.toUpperCase())}
               's Blogs
             </h1>
-            <p className="text-xl text-purple-100 mb-8">
+            <p className="text-xl text-emerald-100 mb-8">
               Discover insights and strategies for maintaining digital wellness
               in today's connected world.
             </p>
@@ -68,9 +68,9 @@ export default function CategoriesBlogs({ slug }) {
                 placeholder="Search blogs..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-12 pr-4 py-4 rounded-full bg-white/10 backdrop-blur-sm text-white placeholder-purple-200 border border-white/20 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:bg-white/20"
+                className="w-full pl-12 pr-4 py-4 rounded-full bg-white/10 backdrop-blur-sm text-white placeholder-emerald-200 border border-white/20 focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:bg-white/20"
               />
-              <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-purple-200" />
+              <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-emerald-200" />
             </div>
           </div>
         </div>
@@ -78,7 +78,7 @@ export default function CategoriesBlogs({ slug }) {
       <section className="container mx-auto px-6 py-12">
         {loading ? (
           <div className="flex justify-center items-center">
-            <div className="animate-spin rounded-full h-16 w-16 border-t-2 border-b-2 border-purple-500"></div>
+            <div className="animate-spin rounded-full h-16 w-16 border-t-2 border-b-2 border-emerald-500"></div>
           </div>
         ) : filteredBlogs.length > 0 ? (
           <Swiper
@@ -108,12 +108,12 @@ export default function CategoriesBlogs({ slug }) {
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                     </div>
                     <div className="p-6 flex flex-col flex-grow">
-                      <h3 className="text-xl font-bold text-gray-900 mb-2 hover:text-purple-600">
+                      <h3 className="text-xl font-bold text-gray-900 mb-2 hover:text-emerald-600">
                         {blog.title}
                       </h3>
                       <p className="text-gray-600 flex-grow">{blog.excerpt}</p>
                       <div className="flex items-center gap-3 my-3">
-                        <div className="w-8 h-8 rounded-full border-2 border-purple-100 flex items-center justify-center bg-purple-100 text-purple-600 font-semibold">
+                        <div className="w-8 h-8 rounded-full border-2 border-emerald-100 flex items-center justify-center bg-emerald-100 text-emerald-600 font-semibold">
                           {blog.author.full_name.charAt(0)}
                         </div>
                         <div>
@@ -130,7 +130,7 @@ export default function CategoriesBlogs({ slug }) {
                           <Clock className="h-4 w-4" />
                           {moment(blog.published_at).startOf("hour").fromNow()}
                         </span>
-                        <button className="text-purple-600">Read More</button>
+                        <button className="text-emerald-600">Read More</button>
                       </div>
                     </div>
                   </article>

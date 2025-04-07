@@ -55,7 +55,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-purple-600 text-white relative">
+    <footer className="bg-emerald-100 text-gray-700 relative">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
@@ -66,7 +66,7 @@ const Footer = () => {
                 className="h-8 w-auto"
               />
             </Link>
-            <p className="mt-4 text-gray-200">
+            <p className="mt-4 text-gray-600">
               Empowering mindful technology use for a balanced digital
               lifestyle.
             </p>
@@ -77,7 +77,7 @@ const Footer = () => {
                   href={href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-white hover:text-purple-300 transition-colors duration-200"
+                  className="text-gray-700 hover:text-emerald-600 transition-colors duration-200"
                 >
                   <Icon className="h-6 w-6" />
                   <span className="sr-only">{name}</span>
@@ -87,7 +87,7 @@ const Footer = () => {
           </div>
           {Object.entries(footerLinks).map(([section, links], index) => (
             <div key={index}>
-              <h3 className="text-lg font-semibold mb-4 capitalize text-white">
+              <h3 className="text-lg font-semibold mb-4 capitalize text-gray-800">
                 {section}
               </h3>
               <ul className="space-y-2">
@@ -95,7 +95,7 @@ const Footer = () => {
                   <li key={href}>
                     <Link
                       href={href}
-                      className="text-white hover:text-purple-300 transition-colors duration-200"
+                      className="text-gray-600 hover:text-emerald-600 transition-colors duration-200"
                     >
                       {name}
                     </Link>
@@ -105,8 +105,8 @@ const Footer = () => {
             </div>
           ))}
         </div>
-        <div className="border-t border-purple-500 pt-8 mt-8 text-center">
-          <p className="text-gray-200 text-sm">
+        <div className="border-t border-emerald-200 pt-8 mt-8 text-center">
+          <p className="text-gray-600 text-sm">
             {currentYear ? (
               <div>
                 © {currentYear} BreatheOffline. All rights reserved | Design &
@@ -115,7 +115,7 @@ const Footer = () => {
                   href="https://anantsoftcomputing.com/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-white font-semibold hover:text-gray-400 transition-colors duration-300"
+                  className="text-gray-700 font-semibold hover:text-emerald-600 transition-colors duration-300"
                 >
                   Anant Soft Computing
                 </a>
@@ -129,7 +129,7 @@ const Footer = () => {
       {isVisible && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-8 right-8 p-3 rounded-full bg-purple-600 text-white shadow-lg transition-all duration-300 hover:bg-purple-700"
+          className="fixed bottom-8 right-8 p-3 rounded-full bg-emerald-600 text-white shadow-lg transition-all duration-300 hover:bg-emerald-700"
         >
           <ArrowUpCircle className="h-6 w-6" />
         </button>

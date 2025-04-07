@@ -52,10 +52,10 @@ const ContactUs = () => {
         <div className="absolute inset-0 bg-grid-white/[0.05]" />
         <div className="relative max-w-7xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
-            <div className="inline-block border border-purple-600 py-1 px-3 rounded-full bg-gradient-to-r from-indigo-600 to-pink-600 bg-clip-text text-transparent font-medium text-sm mb-4">
+            <div className="inline-block border border-emerald-600 py-1 px-3 rounded-full bg-gradient-to-br from-emerald-700 via-emerald-600 to-emerald-700 bg-clip-text text-transparent font-medium text-sm mb-4">
               GET IN TOUCH
             </div>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-indigo-600 to-pink-600 bg-clip-text text-transparent mb-4">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-emerald-800 mb-4">
               We're Here to Support Your Digital Wellness Journey
             </h1>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -200,7 +200,7 @@ const ContactUs = () => {
                 </div>
                 <button
                   type="submit"
-                  className="w-full py-3 px-6 bg-purple-600 hover:bg-purple-700 text-white font-medium rounded-lg shadow-lg hover:shadow-xl transition-all flex items-center justify-center group"
+                  className="w-full py-3 px-6 bg-emerald-600 hover:bg-emerald-700 text-white font-medium rounded-lg shadow-lg hover:shadow-xl transition-all flex items-center justify-center group"
                 >
                   Send Message
                   <Send className="ml-2 h-5 w-5 transform group-hover:translate-x-1 transition-transform" />
@@ -213,7 +213,7 @@ const ContactUs = () => {
                 <h3 className="text-xl font-bold mb-6">Contact Information</h3>
                 <div className="space-y-6">
                   <div className="flex items-start">
-                    <div className="p-3 bg-purple-600 rounded-full mr-4">
+                    <div className="p-3 bg-emerald-600 rounded-full mr-4">
                       <Mail className="h-6 w-6 text-white" />
                     </div>
                     <div>
@@ -227,7 +227,7 @@ const ContactUs = () => {
                     </div>
                   </div>
                   <div className="flex items-start">
-                    <div className="p-3 bg-purple-600 rounded-full mr-4">
+                    <div className="p-3 bg-emerald-600 rounded-full mr-4">
                       <MapPin className="h-6 w-6 text-white" />
                     </div>
                     <div>
