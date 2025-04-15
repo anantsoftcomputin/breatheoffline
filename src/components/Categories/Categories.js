@@ -1,6 +1,14 @@
 "use client";
 import { useEffect, useState } from "react";
-import { ArrowRight, Search, Folder, X } from "lucide-react";
+import {
+  ArrowRight,
+  Search,
+  Folder,
+  X,
+  ChevronLeft,
+  ChevronRight,
+  Ellipsis,
+} from "lucide-react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import ajaxCall from "@/helpers/ajaxCall";
@@ -18,6 +26,8 @@ export default function Categories() {
   const [loading, setLoading] = useState(true);
   const [categories, setCategories] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
+  const [currentPage, setCurrentPage] = useState(1);
+  const [itemsPerPage] = useState(6);
 
   useEffect(() => {
     const fetchCategories = async () => {
@@ -48,6 +58,112 @@ export default function Categories() {
   const filteredCategories = categories.filter((category) =>
     category.name.toLowerCase().includes(searchQuery.toLowerCase())
   );
+
+  const indexOfLastItem = currentPage * itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  const currentItems = filteredCategories.slice(
+    indexOfFirstItem,
+    indexOfLastItem
+  );
+  const totalPages = Math.ceil(filteredCategories.length / itemsPerPage);
+
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [searchQuery]);
+
+  const PaginationControls = () => {
+    const maxVisiblePages = 5;
+
+    if (totalPages <= 1) return null;
+
+    let startPage = Math.max(1, currentPage - Math.floor(maxVisiblePages / 2));
+    let endPage = Math.min(totalPages, startPage + maxVisiblePages - 1);
+
+    if (endPage - startPage + 1 < maxVisiblePages) {
+      startPage = Math.max(1, endPage - maxVisiblePages + 1);
+    }
+
+    return (
+      <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mt-8">
+        <div className="text-sm text-gray-600">
+          Showing {indexOfFirstItem + 1}-
+          {Math.min(indexOfLastItem, filteredCategories.length)} of{" "}
+          {filteredCategories.length} categories
+        </div>
+        <div className="flex items-center gap-2">
+          <button
+            onClick={() => paginate(currentPage - 1)}
+            disabled={currentPage === 1}
+            className="p-2 rounded-full bg-white shadow-md disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-100 transition-colors"
+            aria-label="Previous page"
+          >
+            <ChevronLeft className="w-5 h-5 text-gray-600" />
+          </button>
+          {startPage > 1 && (
+            <>
+              <button
+                onClick={() => paginate(1)}
+                className={`w-10 h-10 rounded-full ${
+                  currentPage === 1
+                    ? "bg-emerald-600 text-white"
+                    : "bg-white text-gray-600 hover:bg-emerald-50"
+                } shadow-md`}
+              >
+                1
+              </button>
+              {startPage > 2 && (
+                <span className="px-2 text-gray-500">
+                  <Ellipsis className="w-5 h-5" />
+                </span>
+              )}
+            </>
+          )}
+          {Array.from({ length: endPage - startPage + 1 }, (_, i) => (
+            <button
+              key={startPage + i}
+              onClick={() => paginate(startPage + i)}
+              className={`w-10 h-10 rounded-full ${
+                currentPage === startPage + i
+                  ? "bg-emerald-600 text-white"
+                  : "bg-white text-gray-600 hover:bg-emerald-50"
+              } shadow-md`}
+            >
+              {startPage + i}
+            </button>
+          ))}
+          {endPage < totalPages && (
+            <>
+              {endPage < totalPages - 1 && (
+                <span className="px-2 text-gray-500">
+                  <Ellipsis className="w-5 h-5" />
+                </span>
+              )}
+              <button
+                onClick={() => paginate(totalPages)}
+                className={`w-10 h-10 rounded-full ${
+                  currentPage === totalPages
+                    ? "bg-emerald-600 text-white"
+                    : "bg-white text-gray-600 hover:bg-emerald-50"
+                } shadow-md`}
+              >
+                {totalPages}
+              </button>
+            </>
+          )}
+          <button
+            onClick={() => paginate(currentPage + 1)}
+            disabled={currentPage === totalPages}
+            className="p-2 rounded-full bg-white shadow-md disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-100 transition-colors"
+            aria-label="Next page"
+          >
+            <ChevronRight className="w-5 h-5 text-gray-600" />
+          </button>
+        </div>
+      </div>
+    );
+  };
 
   return (
     <main className="py-12 min-h-screen">
@@ -115,37 +231,42 @@ export default function Categories() {
               </div>
             ))}
           </div>
-        ) : filteredCategories.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredCategories.map((category, index) => (
-              <Link key={index} href={`/categories/${category.slug}`}>
-                <div className="relative group overflow-hidden bg-white rounded-2xl shadow-lg transition-all duration-500 hover:shadow-xl">
-                  <div
-                    className={`absolute inset-0 bg-gradient-to-r ${
-                      gradientColors[category.colorIndex]
-                    } opacity-90`}
-                  />
-                  <div className="relative p-8 h-full min-h-[320px] flex flex-col">
-                    <div className="flex items-start justify-between mb-4">
-                      <div className="bg-white/20 p-3 rounded-xl">
-                        <Folder className="h-6 w-6 text-white" />
+        ) : currentItems.length > 0 ? (
+          <>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {currentItems.map((category, index) => (
+                <Link key={index} href={`/categories/${category.slug}`}>
+                  <div className="relative group overflow-hidden bg-white rounded-2xl shadow-lg transition-all duration-500 hover:shadow-xl">
+                    <div
+                      className={`absolute inset-0 bg-gradient-to-r ${
+                        gradientColors[category.colorIndex]
+                      } opacity-90`}
+                    />
+                    <div className="relative p-8 h-full min-h-[320px] flex flex-col">
+                      <div className="flex items-start justify-between mb-4">
+                        <div className="bg-white/20 p-3 rounded-xl">
+                          <Folder className="h-6 w-6 text-white" />
+                        </div>
                       </div>
-                    </div>
-                    <h3 className="text-2xl font-bold text-white mb-2">
-                      {category.name}
-                    </h3>
-                    <p className="text-white/90 mb-6">{category.description}</p>
-                    <div className="mt-auto">
-                      <div className="inline-flex items-center gap-2 text-white font-medium group/link">
-                        Explore Category
-                        <ArrowRight className="h-4 w-4 transform group-hover/link:translate-x-1 transition-transform" />
+                      <h3 className="text-2xl font-bold text-white mb-2">
+                        {category.name}
+                      </h3>
+                      <p className="text-white/90 mb-6">
+                        {category.description}
+                      </p>
+                      <div className="mt-auto">
+                        <div className="inline-flex items-center gap-2 text-white font-medium group/link">
+                          Explore Category
+                          <ArrowRight className="h-4 w-4 transform group-hover/link:translate-x-1 transition-transform" />
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </Link>
-            ))}
-          </div>
+                </Link>
+              ))}
+            </div>
+            <PaginationControls />
+          </>
         ) : (
           <div className="flex justify-center items-center">
             <div className="text-center text-gray-600">No Category Found.</div>
