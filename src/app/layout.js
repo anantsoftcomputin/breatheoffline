@@ -36,13 +36,18 @@ export default function RootLayout({ children }) {
             `,
           }}
         ></Script>
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2283636579212292"
+          crossorigin="anonymous"
+        ></Script>
         <meta
           name="google-site-verification"
           content="-vEQwCv3N-7CYJlks9qASX9zmgZ-7sbhBPfH4JKkxT4"
         ></meta>
         <meta
           name="google-adsense-account"
-          content="ca-pub-1049611485767103"
+          content="ca-pub-2283636579212292"
         ></meta>
       </head>
       <body>
