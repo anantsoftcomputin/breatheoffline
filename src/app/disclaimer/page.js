@@ -5,7 +5,7 @@ export default function Disclaimer() {
         <div className="absolute inset-0 bg-grid-white/[0.05]" />
         <div className="relative max-w-7xl mx-auto">
           <div className="text-center mb-8">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-emerald-600 to-emerald-600 bg-clip-text text-transparent">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900">
               Disclaimer
             </h1>
           </div>
@@ -129,9 +129,7 @@ export default function Disclaimer() {
               </div>
               <div className="p-6">
                 <div className="space-y-4">
-                  <h3 className="font-semibold text-gray-900">
-                    As-Is Basis :
-                  </h3>
+                  <h3 className="font-semibold text-gray-900">As-Is Basis :</h3>
                   <ul className="list-disc list-inside text-gray-600 space-y-2">
                     <li>
                       This Site and its content are provided on an "as-is" and
@@ -146,11 +144,11 @@ export default function Disclaimer() {
                   </h3>
                   <ul className="list-disc list-inside text-gray-600 space-y-2">
                     <li>
-                      To the fullest extent permitted by law, breatheoffline.com and
-                      its affiliates, officers, directors, employees, and agents
-                      shall not be liable for any direct, indirect, incidental,
-                      consequential, or punitive damages arising out of or
-                      related to your use of this Site.
+                      To the fullest extent permitted by law, breatheoffline.com
+                      and its affiliates, officers, directors, employees, and
+                      agents shall not be liable for any direct, indirect,
+                      incidental, consequential, or punitive damages arising out
+                      of or related to your use of this Site.
                     </li>
                   </ul>
                 </div>
@@ -206,9 +204,7 @@ export default function Disclaimer() {
                       Disclaimer on this page.
                     </li>
                   </ul>
-                  <h3 className="font-semibold text-gray-900 mt-4">
-                    Review :
-                  </h3>
+                  <h3 className="font-semibold text-gray-900 mt-4">Review :</h3>
                   <ul className="list-disc list-inside text-gray-600 space-y-2">
                     <li>
                       You are advised to review this Disclaimer periodically for
@@ -228,7 +224,8 @@ export default function Disclaimer() {
               </div>
               <div className="p-6">
                 <p className="text-gray-600">
-                This Disclaimer shall be governed by and construed in accordance with the laws of Vadodara, Gujarat, India.
+                  This Disclaimer shall be governed by and construed in
+                  accordance with the laws of Vadodara, Gujarat, India.
                 </p>
               </div>
             </div>

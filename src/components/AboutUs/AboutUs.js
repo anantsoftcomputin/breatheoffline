@@ -1,83 +1,83 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import {
-  Target,
-  Heart,
-  Wrench,
-  Clock,
+  Smartphone,
+  Leaf,
+  BrainCircuit,
   Users,
-  Globe,
-  BookOpen,
-  MessageCircle,
+  Zap,
+  EyeOff,
+  Sun,
+  CalendarCheck,
 } from "lucide-react";
 import Link from "next/link";
 
 const stats = [
   {
-    number: "10K+",
-    label: "Community Members",
-    icon: <Users className="h-6 w-6 text-emerald-600" />,
+    number: "25K+",
+    label: "Mindful Members",
+    icon: <Leaf className="h-6 w-6 text-emerald-600" />,
     bgColor: "bg-emerald-100",
   },
   {
-    number: "500+",
-    label: "Success Stories",
-    icon: <Heart className="h-6 w-6 text-emerald-600" />,
+    number: "1M+",
+    label: "Screen Hours Saved",
+    icon: <Smartphone className="h-6 w-6 text-emerald-600" />,
+    bgColor: "bg-emerald-100",
+  },
+  {
+    number: "100+",
+    label: "Expert Guides",
+    icon: <BrainCircuit className="h-6 w-6 text-emerald-600" />,
     bgColor: "bg-emerald-100",
   },
   {
     number: "50+",
-    label: "Expert Contributors",
-    icon: <BookOpen className="h-6 w-6 text-emerald-600" />,
-    bgColor: "bg-emerald-100",
-  },
-  {
-    number: "15+",
-    label: "Digital Detox Tools",
-    icon: <Wrench className="h-6 w-6 text-emerald-600" />,
+    label: "Detox Challenges",
+    icon: <Zap className="h-6 w-6 text-emerald-600" />,
     bgColor: "bg-emerald-100",
   },
 ];
 
 const resources = [
   {
-    icon: Heart,
-    title: "Success Stories",
+    icon: EyeOff,
+    title: "Digital Detox Plans",
     description:
-      "Real stories from individuals who have transformed their lives through digital detox.",
+      "Step-by-step programs to help you reduce screen time and reclaim your focus.",
   },
   {
-    icon: Wrench,
-    title: "Expert Tips & Guides",
+    icon: BrainCircuit,
+    title: "Mindful Tech Strategies",
     description:
-      "Professional guidance and strategies for managing your digital habits effectively.",
+      "Neuroscience-backed approaches to build healthier digital habits.",
   },
   {
-    icon: Clock,
-    title: "Digital Detox Tools",
+    icon: CalendarCheck,
+    title: "30-Day Challenges",
     description:
-      "Practical tools and challenges to help you unplug and maintain a healthy balance.",
+      "Structured programs to help you establish lasting digital wellness routines.",
   },
 ];
 
 const values = [
   {
-    icon: Target,
-    title: "Mindful Technology Use",
+    icon: Leaf,
+    title: "Intentional Technology Use",
     description:
-      "We promote conscious and balanced engagement with digital tools to enhance life without letting technology control it.",
+      "We help you develop conscious engagement with technology using it with purpose rather than by habit.",
   },
   {
-    icon: Globe,
-    title: "Digital Wellness",
+    icon: Sun,
+    title: "Digital Wellbeing",
     description:
-      "Creating awareness about how technology affects mental health and providing practical solutions for a healthier relationship with devices.",
+      "Our approach combines mindfulness and behavioral science to create sustainable tech-life balance.",
   },
   {
-    icon: MessageCircle,
-    title: "Community Support",
+    icon: Users,
+    title: "Supportive Community",
     description:
-      "Building a supportive community where individuals can share experiences and strategies for maintaining digital balance.",
+      "Join thousands who are reclaiming their attention and living more present lives.",
   },
 ];
 
@@ -95,23 +95,24 @@ const AboutUs = () => {
         <div className="relative container mx-auto px-6">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Welcome to BreatheOffline
+              Reclaim Your Attention
             </h1>
             <p className="text-xl text-gray-700 mb-8 max-w-2xl mx-auto">
-              Your sanctuary for rediscovering balance in the digital age. We
-              empower individuals to take control of their screen time and
-              cultivate healthier, more fulfilling lives offline.
+              At BreatheOffline, we're building a movement of mindful technology
+              use helping people break free from digital overload and rediscover
+              life beyond screens.
             </p>
           </div>
         </div>
       </section>
+
       <section className="py-16 bg-white">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <div
                 key={stat.label + index}
-                className={`text-center p-6 bg-emerald-50 rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-2 ${
+                className={`text-center p-6 bg-emerald-50 rounded-xl border border-emerald-100 shadow-sm hover:shadow-md transition-all duration-500 hover:-translate-y-2 ${
                   isVisible
                     ? "opacity-100 translate-y-0"
                     : "opacity-0 translate-y-10"
@@ -132,6 +133,7 @@ const AboutUs = () => {
           </div>
         </div>
       </section>
+
       <section className="py-20 bg-emerald-100">
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -142,15 +144,13 @@ const AboutUs = () => {
                   : "opacity-0 -translate-x-10"
               }`}
             >
-              <h3 className="text-3xl md:text-4xl font-bold text-emerald-800 text-transparent mb-6">
-                Our Mission
+              <h3 className="text-3xl md:text-4xl font-bold text-emerald-800 mb-6">
+                Our Purpose
               </h3>
               <p className="text-gray-800 text-lg mb-8">
-                At BreatheOffline, we are passionate about helping people
-                achieve harmony between their digital and real lives. Through
-                insightful content, practical strategies, and inspiring stories,
-                we guide our community on a journey of mindfulness,
-                productivity, and self-discovery.
+                In a world of constant connectivity, we help you establish
+                healthy boundaries with technology. Through research-based
+                content and practical tools, we empower you to:
               </p>
               <div className="space-y-6">
                 {values.map((value, index) => (
@@ -179,25 +179,23 @@ const AboutUs = () => {
             >
               <div className="relative rounded-2xl overflow-hidden shadow-xl">
                 <img
-                  src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800"
-                  alt="Team Meeting"
+                  src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                  alt="Person enjoying nature without phone"
                   className="w-full h-auto rounded-2xl object-cover transition-all duration-700 hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-emerald-900/50 to-transparent opacity-60"></div>
               </div>
-              <div className="absolute -bottom-6 -left-6 w-48 h-48 bg-emerald-200 rounded-2xl -z-10 opacity-50 blur-lg"></div>
-              <div className="absolute -top-6 -right-6 w-32 h-32 bg-emerald-200 rounded-full -z-10 opacity-50 blur-lg"></div>
             </div>
           </div>
         </div>
       </section>
+
       <section className="py-20 bg-white">
         <div className="container mx-auto px-6">
-          <h2 className="text-center text-4xl md:text-5xl font-bold text-emerald-800 text-transparent mb-4">
-            What We Offer
+          <h2 className="text-center text-4xl md:text-5xl font-bold text-emerald-800 mb-4">
+            Our Digital Wellness Resources
           </h2>
           <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-            Explore our resources designed to help you build a healthier
+            Practical tools and knowledge to help you cultivate a balanced
             relationship with technology
           </p>
           <div className="grid md:grid-cols-3 gap-8">
@@ -222,7 +220,7 @@ const AboutUs = () => {
                   href="/blogs"
                   className="inline-flex items-center text-gray-600 hover:text-emerald-600 font-medium transition-colors"
                 >
-                  Learn more
+                  Explore resources
                   <svg
                     className="w-5 h-5 ml-1"
                     fill="none"
@@ -243,18 +241,22 @@ const AboutUs = () => {
           </div>
         </div>
       </section>
+
       <section className="py-20 bg-emerald-50">
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-3xl font-bold text-emerald-800 mb-6">
-            Join Us on the Journey
+            Ready to Transform Your Tech Habits?
           </h2>
           <p className="text-xl text-gray-700 mb-8 max-w-2xl mx-auto">
-            Together, we can unplug and thrive. Start your digital detox journey
-            today and rediscover the beauty of living in the present moment.
+            Join our community of mindful technology users and start your
+            journey toward digital balance today.
           </p>
-          <button className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white font-semibold transition-colors duration-300 disabled:opacity-70">
-            Get Started
-          </button>
+          <Link
+            href=""
+            className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white font-semibold transition-colors duration-300"
+          >
+            Begin Your Detox Journey
+          </Link>
         </div>
       </section>
     </main>

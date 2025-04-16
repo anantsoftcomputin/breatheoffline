@@ -67,8 +67,8 @@ const Footer = () => {
               />
             </Link>
             <p className="mt-4 text-gray-600">
-              Empowering mindful technology use for a balanced digital
-              lifestyle.
+              Helping you cultivate a healthier relationship with technology
+              through mindfulness and intentional living.
             </p>
             <div className="flex space-x-4 mt-6">
               {socialLinks.map(({ name, icon: Icon, href }) => (
