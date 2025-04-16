@@ -4,13 +4,15 @@ import { useForm, Controller } from "react-hook-form";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import ajaxCall from "@/helpers/ajaxCall";
-import { Mail, CheckCircle, Sparkles, Send } from "lucide-react";
+import { Mail, CheckCircle, Smartphone, Leaf, BrainCircuit, Clock, CalendarCheck } from "lucide-react";
 
 const benefits = [
-  "Weekly digital wellness tips",
-  "Exclusive mindfulness resources",
-  "Early access to new articles",
-  "Monthly wellness challenges",
+  "Weekly screen time reduction tips",
+  "Exclusive digital detox guides",
+  "Early access to mindfulness techniques",
+  "Monthly focus challenges",
+  "App usage analytics insights",
+  "Productivity hacks for deep work"
 ];
 
 const NewsLetter = () => {
@@ -35,10 +37,10 @@ const NewsLetter = () => {
         data: { email: data.email, site: "3" },
       });
       if (response.status === 200 || response.status === 201) {
-        toast.success("Subscribed successfully! 🎉");
+        toast.success("Welcome to our mindful community! 🌿");
         reset();
       } else {
-        toast.error("Failed to subscribe. Please try again.");
+        toast.error("Subscription failed. Please try again.");
       }
     } catch (error) {
       console.error("Error subscribing:", error);
@@ -58,15 +60,15 @@ const NewsLetter = () => {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12 transition-all duration-700">
             <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-emerald-100 border border-emerald-200 text-emerald-800 mb-6 shadow-sm">
-              <Sparkles className="h-4 w-4 text-emerald-600 mr-2" />
-              <span className="text-sm font-medium">Join Our Community</span>
+              <Leaf className="h-4 w-4 text-emerald-600 mr-2" />
+              <span className="text-sm font-medium">Mindful Tech Living</span>
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-emerald-800 mb-6">
-              Get Weekly Digital Wellness Insights
+              Reclaim Your Focus With Our Newsletter
             </h2>
             <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-              Subscribe to our newsletter and receive expert tips on maintaining
-              digital balance and mindful technology use.
+              Join thousands who receive our research-backed strategies for reducing screen time, 
+              improving concentration, and building healthier digital habits.
             </p>
           </div>
           <div className="max-w-lg mx-auto transition-all duration-700 delay-200">
@@ -90,7 +92,7 @@ const NewsLetter = () => {
                     <input
                       {...field}
                       type="email"
-                      placeholder="Enter your email"
+                      placeholder="Your best email address"
                       className="w-full pl-12 pr-4 py-4 rounded-full bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500"
                     />
                   )}
@@ -106,26 +108,31 @@ const NewsLetter = () => {
                 disabled={isLoading}
                 className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white font-semibold transition-colors duration-300 disabled:opacity-70"
               >
-                {isLoading ? "Subscribing..." : "Subscribe"}
-                <Send className="ml-2 h-5 w-5" />
+                {isLoading ? "Joining..." : "Join Free"}
+                <CheckCircle className="ml-2 h-5 w-5" />
               </button>
             </form>
           </div>
-          <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl mx-auto transition-all duration-700 delay-400">
+          <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-4xl mx-auto transition-all duration-700 delay-400">
             {benefits.map((benefit, index) => (
               <div
                 key={index}
-                className="flex items-center gap-3 text-gray-700"
+                className="flex items-center gap-3 text-gray-700 bg-white/50 p-3 rounded-lg border border-emerald-100"
               >
                 <div className="flex-shrink-0 w-8 h-8 rounded-full bg-emerald-100 flex items-center justify-center border border-emerald-200">
-                  <CheckCircle className="h-4 w-4 text-emerald-600" />
+                  {index === 0 && <Smartphone className="h-4 w-4 text-emerald-600" />}
+                  {index === 1 && <BrainCircuit className="h-4 w-4 text-emerald-600" />}
+                  {index === 2 && <Leaf className="h-4 w-4 text-emerald-600" />}
+                  {index === 3 && <Clock className="h-4 w-4 text-emerald-600" />}
+                  {index === 4 && <CalendarCheck className="h-4 w-4 text-emerald-600" />}
+                  {index === 5 && <CheckCircle className="h-4 w-4 text-emerald-600" />}
                 </div>
-                <span>{benefit}</span>
+                <span className="text-sm font-medium">{benefit}</span>
               </div>
             ))}
           </div>
           <p className="mt-8 text-center text-sm text-gray-500 transition-all duration-700 delay-500">
-            We respect your privacy. Unsubscribe at any time.
+            We'll never spam you. Unsubscribe with one click anytime.
           </p>
         </div>
       </div>
