@@ -1,8 +1,7 @@
 import "./globals.css";
+import Script from "next/script";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
-import Script from "next/script";
-import AdBanner from "@/components/AdBanner/AdBanner";
 
 export const metadata = {
   icons: {
@@ -52,7 +51,6 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         <Header />
-        <AdBanner />
         {children}
         <Footer />
       </body>
