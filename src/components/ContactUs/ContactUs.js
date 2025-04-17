@@ -50,17 +50,14 @@ const ContactUs = () => {
   };
 
   return (
-    <div className="py-12 min-h-screen px-4 sm:px-6 lg:px-8 bg-emerald-50">
+    <div className="py-12 min-h-screen px-4 sm:px-6 lg:px-8 bg-gray-50">
       <ToastContainer position="top-right" autoClose={3000} />
       <div className="relative py-16 sm:py-20">
         <div className="absolute inset-0 bg-grid-white/[0.05]" />
         <div className="relative max-w-7xl mx-auto">
           <div className="text-center mb-12 sm:mb-16">
-            <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-emerald-100 border border-emerald-200 text-emerald-800 mb-6 shadow-sm">
-              <Leaf className="h-4 w-4 text-emerald-600 mr-2" />
-              <span className="text-sm font-medium">
-                Digital Wellness Support
-              </span>
+          <div className="inline-block border border-emerald-600 py-1 px-3 rounded-full bg-gradient-to-br from-emerald-700 via-emerald-600 to-emerald-700 bg-clip-text text-transparent font-medium text-sm mb-4">
+              CONNECT WITH US
             </div>
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-emerald-800 mb-4">
               Get Personalized Digital Wellness Guidance
@@ -219,7 +216,7 @@ const ContactUs = () => {
               <div className="bg-white rounded-2xl shadow-lg p-6 sm:p-8 text-gray-800 transform transition-all duration-500 hover:shadow-xl border border-emerald-100">
                 <h3 className="text-xl font-bold mb-6 flex items-center">
                   <Users className="h-6 w-6 text-emerald-600 mr-3" />
-                  Contact Our Team
+                  Contact Information
                 </h3>
                 <div className="space-y-6">
                   <div className="flex items-start">
@@ -232,7 +229,7 @@ const ContactUs = () => {
                       </p>
                       <a
                         href="mailto:wellness@breatheoffline.com"
-                        className="text-emerald-700 hover:underline font-medium"
+                        className="text-gray-700 hover:underline"
                       >
                         wellness@breatheoffline.com
                       </a>
@@ -247,10 +244,10 @@ const ContactUs = () => {
                         For urgent inquiries
                       </p>
                       <a
-                        href="tel:+1234567890"
-                        className="text-emerald-700 hover:underline font-medium"
+                        href="tel:+91 96385 44455"
+                        className="text-gray-700 hover:underline"
                       >
-                        +1 (234) 567-890
+                        +91 96385 44455
                       </a>
                     </div>
                   </div>
@@ -322,7 +319,7 @@ const ContactUs = () => {
             </h3>
             <div className="h-80 rounded-xl overflow-hidden bg-gray-100 border border-gray-200">
               <iframe
-                title="Office Location"
+                title="Anant Soft Computing"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.169202432397!2d73.16878167596472!3d22.309439742562773!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395fc5873e594259%3A0xda3dc91c20f4beec!2sAnant%20Soft%20Computing!5e0!3m2!1sen!2sin!4v1731308281495!5m2!1sen!2sin"
                 width="100%"
                 height="400"
