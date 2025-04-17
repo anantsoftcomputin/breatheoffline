@@ -112,7 +112,7 @@ const TrendingBlogs = () => {
                     <p className="text-lg sm:text-xl font-bold text-gray-900 mb-2 sm:mb-3 group-hover:text-emerald-600 transition-colors">
                       {blog.title}
                     </p>
-                    <p className="text-gray-600 text-sm sm:text-base mb-3 sm:mb-4 flex-grow">
+                    <p className="text-gray-600 text-sm sm:text-base mb-3 sm:mb-4 flex-grow line-clamp-3">
                       {blog.excerpt}
                     </p>
                     <div className="flex items-center gap-3 mb-3 sm:mb-4">

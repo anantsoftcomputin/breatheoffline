@@ -180,7 +180,7 @@ const LatestBlogs = () => {
                     <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-emerald-600 transition-colors">
                       {blog.title}
                     </h3>
-                    <p className="text-gray-600 mb-4 flex-grow">
+                    <p className="text-gray-600 mb-4 flex-grow line-clamp-3">
                       {blog.excerpt}
                     </p>
                     <div className="flex items-center gap-3 mb-3 sm:mb-4">
