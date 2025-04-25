@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://breatheoffline.com/
+Host: https://breatheoffline.com
 
 # Sitemaps
 Sitemap: https://breatheoffline.com/sitemap.xml
