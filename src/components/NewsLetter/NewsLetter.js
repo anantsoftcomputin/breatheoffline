@@ -4,7 +4,15 @@ import { useForm, Controller } from "react-hook-form";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import ajaxCall from "@/helpers/ajaxCall";
-import { Mail, CheckCircle, Smartphone, Leaf, BrainCircuit, Clock, CalendarCheck } from "lucide-react";
+import {
+  Mail,
+  CheckCircle,
+  Smartphone,
+  Leaf,
+  BrainCircuit,
+  Clock,
+  CalendarCheck,
+} from "lucide-react";
 
 const benefits = [
   "Weekly screen time reduction tips",
@@ -12,7 +20,7 @@ const benefits = [
   "Early access to mindfulness techniques",
   "Monthly focus challenges",
   "App usage analytics insights",
-  "Productivity hacks for deep work"
+  "Productivity hacks for deep work",
 ];
 
 const NewsLetter = () => {
@@ -37,10 +45,10 @@ const NewsLetter = () => {
         data: { email: data.email, site: "3" },
       });
       if (response.status === 200 || response.status === 201) {
-        toast.success("Welcome to our mindful community! 🌿");
+        toast.success("Subscribed successfully! 🎉");
         reset();
       } else {
-        toast.error("Subscription failed. Please try again.");
+        toast.error("Failed to subscribe. Please try again.");
       }
     } catch (error) {
       console.error("Error subscribing:", error);
@@ -51,7 +59,11 @@ const NewsLetter = () => {
   };
 
   return (
-    <section id="newsletter-section" className="relative py-20 overflow-hidden">
+    <section
+      id="newsletter-section"
+      aria-labelledby="newsletter-heading"
+      className="relative py-20 overflow-hidden"
+    >
       <ToastContainer position="top-right" autoClose={3000} />
       <div className="absolute inset-0 bg-emerald-50">
         <div className="absolute inset-0 bg-grid-white/[0.05]" />
@@ -60,24 +72,38 @@ const NewsLetter = () => {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12 transition-all duration-700">
             <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-emerald-100 border border-emerald-200 text-emerald-800 mb-6 shadow-sm">
-              <Leaf className="h-4 w-4 text-emerald-600 mr-2" />
+              <Leaf
+                className="h-4 w-4 text-emerald-600 mr-2"
+                aria-hidden="true"
+              />
               <span className="text-sm font-medium">Mindful Tech Living</span>
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-emerald-800 mb-6">
+            <h2
+              id="newsletter-heading"
+              className="text-4xl md:text-5xl font-bold text-emerald-800 mb-6"
+            >
               Reclaim Your Focus With Our Newsletter
             </h2>
             <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-              Join thousands who receive our research-backed strategies for reducing screen time, 
-              improving concentration, and building healthier digital habits.
+              Join thousands who receive our research-backed strategies for
+              reducing screen time, improving concentration, and building
+              healthier digital habits.
             </p>
           </div>
           <div className="max-w-lg mx-auto transition-all duration-700 delay-200">
             <form
               onSubmit={handleSubmit(onSubmit)}
               className="relative flex flex-col sm:flex-row gap-4"
+              aria-labelledby="newsletter-heading"
             >
               <div className="relative flex-grow">
-                <Mail className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-400" />
+                <label htmlFor="newsletter-email" className="sr-only">
+                  Email Address
+                </label>
+                <Mail
+                  className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-400"
+                  aria-hidden="true"
+                />
                 <Controller
                   name="email"
                   control={control}
@@ -91,14 +117,25 @@ const NewsLetter = () => {
                   render={({ field }) => (
                     <input
                       {...field}
+                      id="newsletter-email"
                       type="email"
-                      placeholder="Your best email address"
+                      autoComplete="email"
+                      placeholder="Enter your email"
+                      aria-required="true"
+                      aria-invalid={errors.email ? "true" : "false"}
+                      aria-describedby={
+                        errors.email ? "email-error" : undefined
+                      }
                       className="w-full pl-12 pr-4 py-4 rounded-full bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-emerald-500"
                     />
                   )}
                 />
                 {errors.email && (
-                  <p className="text-red-500 text-sm mt-1 pl-4">
+                  <p
+                    id="email-error"
+                    className="text-red-500 text-sm mt-1 pl-4"
+                    role="alert"
+                  >
                     {errors.email.message}
                   </p>
                 )}
@@ -109,7 +146,7 @@ const NewsLetter = () => {
                 className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white font-semibold transition-colors duration-300 disabled:opacity-70"
               >
                 {isLoading ? "Joining..." : "Join Free"}
-                <CheckCircle className="ml-2 h-5 w-5" />
+                <CheckCircle className="ml-2 h-5 w-5" aria-hidden="true" />
               </button>
             </form>
           </div>
@@ -120,12 +157,42 @@ const NewsLetter = () => {
                 className="flex items-center gap-3 text-gray-700 bg-white/50 p-3 rounded-lg border border-emerald-100"
               >
                 <div className="flex-shrink-0 w-8 h-8 rounded-full bg-emerald-100 flex items-center justify-center border border-emerald-200">
-                  {index === 0 && <Smartphone className="h-4 w-4 text-emerald-600" />}
-                  {index === 1 && <BrainCircuit className="h-4 w-4 text-emerald-600" />}
-                  {index === 2 && <Leaf className="h-4 w-4 text-emerald-600" />}
-                  {index === 3 && <Clock className="h-4 w-4 text-emerald-600" />}
-                  {index === 4 && <CalendarCheck className="h-4 w-4 text-emerald-600" />}
-                  {index === 5 && <CheckCircle className="h-4 w-4 text-emerald-600" />}
+                  {index === 0 && (
+                    <Smartphone
+                      className="h-4 w-4 text-emerald-600"
+                      aria-hidden="true"
+                    />
+                  )}
+                  {index === 1 && (
+                    <BrainCircuit
+                      className="h-4 w-4 text-emerald-600"
+                      aria-hidden="true"
+                    />
+                  )}
+                  {index === 2 && (
+                    <Leaf
+                      className="h-4 w-4 text-emerald-600"
+                      aria-hidden="true"
+                    />
+                  )}
+                  {index === 3 && (
+                    <Clock
+                      className="h-4 w-4 text-emerald-600"
+                      aria-hidden="true"
+                    />
+                  )}
+                  {index === 4 && (
+                    <CalendarCheck
+                      className="h-4 w-4 text-emerald-600"
+                      aria-hidden="true"
+                    />
+                  )}
+                  {index === 5 && (
+                    <CheckCircle
+                      className="h-4 w-4 text-emerald-600"
+                      aria-hidden="true"
+                    />
+                  )}
                 </div>
                 <span className="text-sm font-medium">{benefit}</span>
               </div>
