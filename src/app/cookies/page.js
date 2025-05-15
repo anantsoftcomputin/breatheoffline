@@ -1,8 +1,47 @@
+export const metadata = {
+  title: "How BreatheOffline Uses Cookies on This Site | Cookie Policy",
+  description:
+    "Learn how BreatheOffline uses cookies to enhance your Browse experience, analyze site traffic, and personalize content on this website. Understand your choices regarding cookie usage.",
+  openGraph: {
+    title: "How BreatheOffline Uses Cookies on This Site | Cookie Policy",
+    description:
+      "Learn how BreatheOffline uses cookies to enhance your Browse experience, analyze site traffic, and personalize content on this website. Understand your choices regarding cookie usage.",
+    images: [
+      {
+        url: "https://breatheoffline.com/breatheoffline.png",
+        width: 800,
+        height: 600,
+        alt: "BreatheOffline Logo",
+      },
+    ],
+    siteName: "BreatheOffline",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "How BreatheOffline Uses Cookies on This Site | Cookie Policy",
+    description:
+      "Learn how BreatheOffline uses cookies to enhance your Browse experience, analyze site traffic, and personalize content on this website. Understand your choices regarding cookie usage.",
+    images: [
+      {
+        url: "https://breatheoffline.com/breatheoffline.png",
+        width: 800,
+        height: 600,
+        alt: "BreatheOffline Logo",
+      },
+    ],
+  },
+};
+
 export default function CookiesPolicy() {
   return (
     <main className="py-12 min-h-screen px-4 sm:px-6 lg:px-12">
-      <section className="relative py-16 sm:py-20">
-        <div className="absolute inset-0 bg-grid-white/[0.05]" />
+      <div className="relative py-16 sm:py-20">
+        <div
+          className="absolute inset-0 bg-grid-white/[0.05]"
+          aria-hidden="true"
+        />
         <div className="relative max-w-7xl mx-auto">
           <div className="text-center mb-8">
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900">
@@ -10,9 +49,15 @@ export default function CookiesPolicy() {
             </h1>
           </div>
           <div className="space-y-6">
-            <div className="bg-white shadow-md rounded-lg overflow-hidden">
+            <section
+              aria-labelledby="introduction-heading"
+              className="bg-white shadow-md rounded-lg overflow-hidden"
+            >
               <div className="px-6 py-4 border-b border-gray-200">
-                <h2 className="text-xl font-semibold text-gray-900">
+                <h2
+                  id="introduction-heading"
+                  className="text-xl font-semibold text-gray-900"
+                >
                   1. Introduction
                 </h2>
               </div>
@@ -20,16 +65,22 @@ export default function CookiesPolicy() {
                 <p className="text-gray-600">
                   breatheoffline.com (hereinafter referred to as "the Site,"
                   "we," "us," or "our") uses cookies and other similar
-                  technologies to enhance your browsing experience. This Cookie
+                  technologies to enhance your Browse experience. This Cookie
                   Policy explains what cookies are, how we use them, and your
                   choices regarding cookies.
                 </p>
               </div>
-            </div>
+            </section>
 
-            <div className="bg-white shadow-md rounded-lg overflow-hidden">
+            <section
+              aria-labelledby="what-are-cookies-heading"
+              className="bg-white shadow-md rounded-lg overflow-hidden"
+            >
               <div className="px-6 py-4 border-b border-gray-200">
-                <h2 className="text-xl font-semibold text-gray-900">
+                <h2
+                  id="what-are-cookies-heading"
+                  className="text-xl font-semibold text-gray-900"
+                >
                   2. What Are Cookies?
                 </h2>
               </div>
@@ -41,11 +92,17 @@ export default function CookiesPolicy() {
                   provide information to the website owners.
                 </p>
               </div>
-            </div>
+            </section>
 
-            <div className="bg-white shadow-md rounded-lg overflow-hidden">
+            <section
+              aria-labelledby="how-we-use-cookies-heading"
+              className="bg-white shadow-md rounded-lg overflow-hidden"
+            >
               <div className="px-6 py-4 border-b border-gray-200">
-                <h2 className="text-xl font-semibold text-gray-900">
+                <h2
+                  id="how-we-use-cookies-heading"
+                  className="text-xl font-semibold text-gray-900"
+                >
                   3. How We Use Cookies
                 </h2>
               </div>
@@ -98,11 +155,17 @@ export default function CookiesPolicy() {
                   </ul>
                 </div>
               </div>
-            </div>
+            </section>
 
-            <div className="bg-white shadow-md rounded-lg overflow-hidden">
+            <section
+              aria-labelledby="types-of-cookies-heading"
+              className="bg-white shadow-md rounded-lg overflow-hidden"
+            >
               <div className="px-6 py-4 border-b border-gray-200">
-                <h2 className="text-xl font-semibold text-gray-900 ">
+                <h2
+                  id="types-of-cookies-heading"
+                  className="text-xl font-semibold text-gray-900 "
+                >
                   4. Types of Cookies We Use
                 </h2>
               </div>
@@ -129,11 +192,17 @@ export default function CookiesPolicy() {
                   </ul>
                 </div>
               </div>
-            </div>
+            </section>
 
-            <div className="bg-white shadow-md rounded-lg overflow-hidden">
+            <section
+              aria-labelledby="your-cookie-choices-heading"
+              className="bg-white shadow-md rounded-lg overflow-hidden"
+            >
               <div className="px-6 py-4 border-b border-gray-200">
-                <h2 className="text-xl font-semibold text-gray-900 ">
+                <h2
+                  id="your-cookie-choices-heading"
+                  className="text-xl font-semibold text-gray-900 "
+                >
                   5. Your Cookie Choices
                 </h2>
               </div>
@@ -173,11 +242,17 @@ export default function CookiesPolicy() {
                   </ul>
                 </div>
               </div>
-            </div>
+            </section>
 
-            <div className="bg-white shadow-md rounded-lg overflow-hidden">
+            <section
+              aria-labelledby="third-party-cookies-policy-heading"
+              className="bg-white shadow-md rounded-lg overflow-hidden"
+            >
               <div className="px-6 py-4 border-b border-gray-200">
-                <h2 className="text-xl font-semibold text-gray-900">
+                <h2
+                  id="third-party-cookies-policy-heading"
+                  className="text-xl font-semibold text-gray-900"
+                >
                   6. Third-Party Cookies
                 </h2>
               </div>
@@ -188,11 +263,17 @@ export default function CookiesPolicy() {
                   you to review the cookie policies of these third parties.
                 </p>
               </div>
-            </div>
+            </section>
 
-            <div className="bg-white shadow-md rounded-lg overflow-hidden">
+            <section
+              aria-labelledby="changes-to-policy-heading"
+              className="bg-white shadow-md rounded-lg overflow-hidden"
+            >
               <div className="px-6 py-4 border-b border-gray-200">
-                <h2 className="text-xl font-semibold text-gray-900">
+                <h2
+                  id="changes-to-policy-heading"
+                  className="text-xl font-semibold text-gray-900"
+                >
                   7. Changes to This Cookie Policy
                 </h2>
               </div>
@@ -200,15 +281,21 @@ export default function CookiesPolicy() {
                 <p className="text-gray-600">
                   We may update this Cookie Policy from time to time. We will
                   notify you of any changes by posting the new Cookie Policy on
-                  this page.   You are advised to review this Cookie Policy
+                  this page. You are advised to review this Cookie Policy
                   periodically for any changes.
                 </p>
               </div>
-            </div>
+            </section>
 
-            <div className="bg-white shadow-md rounded-lg overflow-hidden">
+            <section
+              aria-labelledby="contact-us-heading"
+              className="bg-white shadow-md rounded-lg overflow-hidden"
+            >
               <div className="px-6 py-4 border-b border-gray-200">
-                <h2 className="text-xl font-semibold text-gray-900">
+                <h2
+                  id="contact-us-heading"
+                  className="text-xl font-semibold text-gray-900"
+                >
                   8. Contact Us
                 </h2>
               </div>
@@ -217,19 +304,31 @@ export default function CookiesPolicy() {
                   If you have any questions or concerns about these Terms and
                   Conditions, please contact us at:
                 </p>
-                <p className="mt-2 text-emerald-600">
-                  Email: support@breatheoffline.com
+                <address className="mt-2 text-emerald-600 not-italic">
+                  Email:{" "}
+                  <a
+                    href="mailto:support@breatheoffline.com"
+                    className="hover:underline"
+                  >
+                    support@breatheoffline.com
+                  </a>
                   <br />
                   Address: Alkapuri, Vadodara, Gujarat, India 390007.
                   <br />
                   Contact: Available on breatheoffline.com
-                </p>
+                </address>
               </div>
-            </div>
+            </section>
 
-            <div className="bg-white shadow-md rounded-lg overflow-hidden">
+            <section
+              aria-labelledby="governing-law-heading"
+              className="bg-white shadow-md rounded-lg overflow-hidden"
+            >
               <div className="px-6 py-4 border-b border-gray-200">
-                <h2 className="text-xl font-semibold text-gray-900">
+                <h2
+                  id="governing-law-heading"
+                  className="text-xl font-semibold text-gray-900"
+                >
                   9. Governing Law
                 </h2>
               </div>
@@ -239,10 +338,10 @@ export default function CookiesPolicy() {
                   accordance with the laws of Vadodara, Gujarat, India.
                 </p>
               </div>
-            </div>
+            </section>
           </div>
         </div>
-      </section>
+      </div>
     </main>
   );
 }

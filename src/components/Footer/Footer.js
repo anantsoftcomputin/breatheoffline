@@ -82,7 +82,7 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-700 hover:text-emerald-600 transition-colors duration-200"
-                  aria-label={`Follow Unplugwell on ${name}`}
+                  aria-label={`Follow BreatheOffline on ${name}`}
                   role="listitem"
                 >
                   <Icon className="h-6 w-6" aria-hidden="true" />
