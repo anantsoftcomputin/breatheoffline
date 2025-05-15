@@ -1,8 +1,47 @@
+export const metadata = {
+  title: "BreatheOffline – Terms & Conditions You Should Know",
+  description:
+    "Review BreatheOffline’s Terms & Conditions to understand the rules, user responsibilities, and legal guidelines for using our website and services.",
+  openGraph: {
+    title: "BreatheOffline – Terms & Conditions You Should Know",
+    description:
+      "Review BreatheOffline’s Terms & Conditions to understand the rules, user responsibilities, and legal guidelines for using our website and services.",
+    images: [
+      {
+        url: "https://breatheoffline.com/breatheoffline.png",
+        width: 800,
+        height: 600,
+        alt: "BreatheOffline Logo",
+      },
+    ],
+    siteName: "BreatheOffline",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "BreatheOffline – Terms & Conditions You Should Know",
+    description:
+      "Review BreatheOffline’s Terms & Conditions to understand the rules, user responsibilities, and legal guidelines for using our website and services.",
+    images: [
+      {
+        url: "https://breatheoffline.com/breatheoffline.png",
+        width: 800,
+        height: 600,
+        alt: "BreatheOffline Logo",
+      },
+    ],
+  },
+};
+
 export default function TermsAndConditions() {
   return (
     <main className="py-12 min-h-screen px-4 sm:px-6 lg:px-12">
-      <section className="relative py-16 sm:py-20">
-        <div className="absolute inset-0 bg-grid-white/[0.05]" />
+      <div className="relative py-16 sm:py-20">
+        <div
+          className="absolute inset-0 bg-grid-white/[0.05]"
+          aria-hidden="true"
+        />
         <div className="relative max-w-7xl mx-auto">
           <div className="text-center mb-8">
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900">
@@ -11,9 +50,15 @@ export default function TermsAndConditions() {
           </div>
 
           <div className="space-y-6">
-            <div className="bg-white shadow-md rounded-lg overflow-hidden">
+            <section
+              aria-labelledby="acceptance-terms-heading"
+              className="bg-white shadow-md rounded-lg overflow-hidden"
+            >
               <div className="px-6 py-4 border-b border-gray-200">
-                <h2 className="text-xl font-semibold text-gray-900">
+                <h2
+                  id="acceptance-terms-heading"
+                  className="text-xl font-semibold text-gray-900"
+                >
                   1. Acceptance of Terms
                 </h2>
               </div>
@@ -26,11 +71,17 @@ export default function TermsAndConditions() {
                   our Site.
                 </p>
               </div>
-            </div>
+            </section>
 
-            <div className="bg-white shadow-md rounded-lg overflow-hidden">
+            <section
+              aria-labelledby="content-use-heading"
+              className="bg-white shadow-md rounded-lg overflow-hidden"
+            >
               <div className="px-6 py-4 border-b border-gray-200">
-                <h2 className="text-xl font-semibold text-gray-900">
+                <h2
+                  id="content-use-heading"
+                  className="text-xl font-semibold text-gray-900"
+                >
                   2. Information We Collect
                 </h2>
               </div>
@@ -74,11 +125,17 @@ export default function TermsAndConditions() {
                   </ul>
                 </div>
               </div>
-            </div>
+            </section>
 
-            <div className="bg-white shadow-md rounded-lg overflow-hidden">
+            <section
+              aria-labelledby="user-conduct-heading"
+              className="bg-white shadow-md rounded-lg overflow-hidden"
+            >
               <div className="px-6 py-4 border-b border-gray-200">
-                <h2 className="text-xl font-semibold text-gray-900">
+                <h2
+                  id="user-conduct-heading"
+                  className="text-xl font-semibold text-gray-900"
+                >
                   3. User Conduct
                 </h2>
               </div>
@@ -119,11 +176,17 @@ export default function TermsAndConditions() {
                   </ul>
                 </div>
               </div>
-            </div>
+            </section>
 
-            <div className="bg-white shadow-md rounded-lg overflow-hidden">
+            <section
+              aria-labelledby="disclaimers-heading"
+              className="bg-white shadow-md rounded-lg overflow-hidden"
+            >
               <div className="px-6 py-4 border-b border-gray-200">
-                <h2 className="text-xl font-semibold text-gray-900">
+                <h2
+                  id="disclaimers-heading"
+                  className="text-xl font-semibold text-gray-900"
+                >
                   4. Disclaimers
                 </h2>
               </div>
@@ -162,11 +225,17 @@ export default function TermsAndConditions() {
                   </ul>
                 </div>
               </div>
-            </div>
+            </section>
 
-            <div className="bg-white shadow-md rounded-lg overflow-hidden">
+            <section
+              aria-labelledby="limitation-liability-terms-heading"
+              className="bg-white shadow-md rounded-lg overflow-hidden"
+            >
               <div className="px-6 py-4 border-b border-gray-200">
-                <h2 className="text-xl font-semibold text-gray-900">
+                <h2
+                  id="limitation-liability-terms-heading"
+                  className="text-xl font-semibold text-gray-900"
+                >
                   5. Limitation of Liability
                 </h2>
               </div>
@@ -195,11 +264,17 @@ export default function TermsAndConditions() {
                   </ul>
                 </div>
               </div>
-            </div>
+            </section>
 
-            <div className="bg-white shadow-md rounded-lg overflow-hidden">
+            <section
+              aria-labelledby="changes-terms-heading"
+              className="bg-white shadow-md rounded-lg overflow-hidden"
+            >
               <div className="px-6 py-4 border-b border-gray-200">
-                <h2 className="text-xl font-semibold text-gray-900">
+                <h2
+                  id="changes-terms-heading"
+                  className="text-xl font-semibold text-gray-900"
+                >
                   6. Changes to Terms and Conditions
                 </h2>
               </div>
@@ -226,11 +301,17 @@ export default function TermsAndConditions() {
                   </ul>
                 </div>
               </div>
-            </div>
+            </section>
 
-            <div className="bg-white shadow-md rounded-lg overflow-hidden">
+            <section
+              aria-labelledby="termination-heading"
+              className="bg-white shadow-md rounded-lg overflow-hidden"
+            >
               <div className="px-6 py-4 border-b border-gray-200">
-                <h2 className="text-xl font-semibold text-gray-900">
+                <h2
+                  id="termination-heading"
+                  className="text-xl font-semibold text-gray-900"
+                >
                   7. Termination
                 </h2>
               </div>
@@ -257,11 +338,17 @@ export default function TermsAndConditions() {
                   </ul>
                 </div>
               </div>
-            </div>
+            </section>
 
-            <div className="bg-white shadow-md rounded-lg overflow-hidden">
+            <section
+              aria-labelledby="governing-law-terms-heading"
+              className="bg-white shadow-md rounded-lg overflow-hidden"
+            >
               <div className="px-6 py-4 border-b border-gray-200">
-                <h2 className="text-xl font-semibold text-gray-900">
+                <h2
+                  id="governing-law-terms-heading"
+                  className="text-xl font-semibold text-gray-900"
+                >
                   8. Governing Law
                 </h2>
               </div>
@@ -290,11 +377,17 @@ export default function TermsAndConditions() {
                   </ul>
                 </div>
               </div>
-            </div>
+            </section>
 
-            <div className="bg-white shadow-md rounded-lg overflow-hidden">
+            <section
+              aria-labelledby="contact-us-terms-heading"
+              className="bg-white shadow-md rounded-lg overflow-hidden"
+            >
               <div className="px-6 py-4 border-b border-gray-200">
-                <h2 className="text-xl font-semibold text-gray-900">
+                <h2
+                  id="contact-us-terms-heading"
+                  className="text-xl font-semibold text-gray-900"
+                >
                   9. Contact Us
                 </h2>
               </div>
@@ -303,19 +396,31 @@ export default function TermsAndConditions() {
                   If you have any questions or concerns about these Terms and
                   Conditions, please contact us at:
                 </p>
-                <p className="mt-2 text-emerald-600">
-                  Email: support@breatheoffline.com
+                <address className="mt-2 text-emerald-600 not-italic">
+                  Email:{" "}
+                  <a
+                    href="mailto:support@breatheoffline.com"
+                    className="hover:underline"
+                  >
+                    support@breatheoffline.com
+                  </a>
                   <br />
                   Address: Alkapuri, Vadodara, Gujarat, India 390007.
                   <br />
                   Contact: Available on breatheoffline.com
-                </p>
+                </address>
               </div>
-            </div>
+            </section>
 
-            <div className="bg-white shadow-md rounded-lg overflow-hidden">
+            <section
+              aria-labelledby="entire-agreement-heading"
+              className="bg-white shadow-md rounded-lg overflow-hidden"
+            >
               <div className="px-6 py-4 border-b border-gray-200">
-                <h2 className="text-xl font-semibold text-gray-900">
+                <h2
+                  id="entire-agreement-heading"
+                  className="text-xl font-semibold text-gray-900"
+                >
                   10. Entire Agreement
                 </h2>
               </div>
@@ -326,10 +431,10 @@ export default function TermsAndConditions() {
                   Site, superseding any prior agreements.
                 </p>
               </div>
-            </div>
+            </section>
           </div>
         </div>
-      </section>
+      </div>
     </main>
   );
 }

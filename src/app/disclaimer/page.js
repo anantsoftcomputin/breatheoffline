@@ -1,8 +1,47 @@
+export const metadata = {
+  title: "Important Disclaimer Notice | BreatheOffline",
+  description:
+    "Read BreatheOffline's Disclaimer to understand the limitations of our content, liability, and how users should interpret information on this site.",
+  openGraph: {
+    title: "Important Disclaimer Notice | BreatheOffline",
+    description:
+      "Read BreatheOffline's Disclaimer to understand the limitations of our content, liability, and how users should interpret information on this site.",
+    images: [
+      {
+        url: "https://breatheoffline.com/breatheoffline.png",
+        width: 800,
+        height: 600,
+        alt: "BreatheOffline Logo",
+      },
+    ],
+    siteName: "BreatheOffline",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Important Disclaimer Notice | BreatheOffline",
+    description:
+      "Read BreatheOffline's Disclaimer to understand the limitations of our content, liability, and how users should interpret information on this site.",
+    images: [
+      {
+        url: "https://breatheoffline.com/breatheoffline.png",
+        width: 800,
+        height: 600,
+        alt: "BreatheOffline Logo",
+      },
+    ],
+  },
+};
+
 export default function Disclaimer() {
   return (
     <main className="py-12 min-h-screen px-4 sm:px-6 lg:px-12">
-      <section className="relative py-16 sm:py-20">
-        <div className="absolute inset-0 bg-grid-white/[0.05]" />
+      <div className="relative py-16 sm:py-20">
+        <div
+          className="absolute inset-0 bg-grid-white/[0.05]"
+          aria-hidden="true"
+        />
         <div className="relative max-w-7xl mx-auto">
           <div className="text-center mb-8">
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900">
@@ -10,9 +49,15 @@ export default function Disclaimer() {
             </h1>
           </div>
           <div className="space-y-6">
-            <div className="bg-white shadow-md rounded-lg overflow-hidden">
+            <section
+              aria-labelledby="general-info-heading"
+              className="bg-white shadow-md rounded-lg overflow-hidden"
+            >
               <div className="px-6 py-4 border-b border-gray-200">
-                <h2 className="text-xl font-semibold text-gray-900">
+                <h2
+                  id="general-info-heading"
+                  className="text-xl font-semibold text-gray-900"
+                >
                   1. General Information
                 </h2>
               </div>
@@ -26,11 +71,17 @@ export default function Disclaimer() {
                   advice.
                 </p>
               </div>
-            </div>
+            </section>
 
-            <div className="bg-white shadow-md rounded-lg overflow-hidden">
+            <section
+              aria-labelledby="digital-detox-heading"
+              className="bg-white shadow-md rounded-lg overflow-hidden"
+            >
               <div className="px-6 py-4 border-b border-gray-200">
-                <h2 className="text-xl font-semibold text-gray-900">
+                <h2
+                  id="digital-detox-heading"
+                  className="text-xl font-semibold text-gray-900"
+                >
                   2. Digital Detox and Well-being
                 </h2>
               </div>
@@ -74,11 +125,17 @@ export default function Disclaimer() {
                   </ul>
                 </div>
               </div>
-            </div>
+            </section>
 
-            <div className="bg-white shadow-md rounded-lg overflow-hidden">
+            <section
+              aria-labelledby="technology-use-heading"
+              className="bg-white shadow-md rounded-lg overflow-hidden"
+            >
               <div className="px-6 py-4 border-b border-gray-200">
-                <h2 className="text-xl font-semibold text-gray-900">
+                <h2
+                  id="technology-use-heading"
+                  className="text-xl font-semibold text-gray-900"
+                >
                   3. Technology and Internet Use
                 </h2>
               </div>
@@ -119,11 +176,17 @@ export default function Disclaimer() {
                   </ul>
                 </div>
               </div>
-            </div>
+            </section>
 
-            <div className="bg-white shadow-md rounded-lg overflow-hidden">
+            <section
+              aria-labelledby="limitation-liability-heading"
+              className="bg-white shadow-md rounded-lg overflow-hidden"
+            >
               <div className="px-6 py-4 border-b border-gray-200">
-                <h2 className="text-xl font-semibold text-gray-900">
+                <h2
+                  id="limitation-liability-heading"
+                  className="text-xl font-semibold text-gray-900"
+                >
                   4. Limitation of Liability
                 </h2>
               </div>
@@ -153,11 +216,17 @@ export default function Disclaimer() {
                   </ul>
                 </div>
               </div>
-            </div>
+            </section>
 
-            <div className="bg-white shadow-md rounded-lg overflow-hidden">
+            <section
+              aria-labelledby="external-links-heading"
+              className="bg-white shadow-md rounded-lg overflow-hidden"
+            >
               <div className="px-6 py-4 border-b border-gray-200">
-                <h2 className="text-xl font-semibold text-gray-900">
+                <h2
+                  id="external-links-heading"
+                  className="text-xl font-semibold text-gray-900"
+                >
                   5. External Links
                 </h2>
               </div>
@@ -184,11 +253,17 @@ export default function Disclaimer() {
                   </ul>
                 </div>
               </div>
-            </div>
+            </section>
 
-            <div className="bg-white shadow-md rounded-lg overflow-hidden">
+            <section
+              aria-labelledby="changes-disclaimer-heading"
+              className="bg-white shadow-md rounded-lg overflow-hidden"
+            >
               <div className="px-6 py-4 border-b border-gray-200">
-                <h2 className="text-xl font-semibold text-gray-900">
+                <h2
+                  id="changes-disclaimer-heading"
+                  className="text-xl font-semibold text-gray-900"
+                >
                   6. Changes to This Disclaimer
                 </h2>
               </div>
@@ -214,11 +289,17 @@ export default function Disclaimer() {
                   </ul>
                 </div>
               </div>
-            </div>
+            </section>
 
-            <div className="bg-white shadow-md rounded-lg overflow-hidden">
+            <section
+              aria-labelledby="governing-law-disclaimer-heading"
+              className="bg-white shadow-md rounded-lg overflow-hidden"
+            >
               <div className="px-6 py-4 border-b border-gray-200">
-                <h2 className="text-xl font-semibold text-gray-900">
+                <h2
+                  id="governing-law-disclaimer-heading"
+                  className="text-xl font-semibold text-gray-900"
+                >
                   7. Governing Law
                 </h2>
               </div>
@@ -228,11 +309,17 @@ export default function Disclaimer() {
                   accordance with the laws of Vadodara, Gujarat, India.
                 </p>
               </div>
-            </div>
+            </section>
 
-            <div className="bg-white shadow-md rounded-lg overflow-hidden">
+            <section
+              aria-labelledby="contact-us-disclaimer-heading"
+              className="bg-white shadow-md rounded-lg overflow-hidden"
+            >
               <div className="px-6 py-4 border-b border-gray-200">
-                <h2 className="text-xl font-semibold text-gray-900">
+                <h2
+                  id="contact-us-disclaimer-heading"
+                  className="text-xl font-semibold text-gray-900"
+                >
                   8. Contact Us
                 </h2>
               </div>
@@ -241,18 +328,24 @@ export default function Disclaimer() {
                   If you have any questions or concerns about these Terms and
                   Conditions, please contact us at:
                 </p>
-                <p className="mt-2 text-emerald-600">
-                  Email: support@breatheoffline.com
+                <address className="mt-2 text-emerald-600 not-italic">
+                  Email:{" "}
+                  <a
+                    href="mailto:support@breatheoffline.com"
+                    className="hover:underline"
+                  >
+                    support@breatheoffline.com
+                  </a>
                   <br />
                   Address: Alkapuri, Vadodara, Gujarat, India 390007.
                   <br />
                   Contact: Available on breatheoffline.com
-                </p>
+                </address>
               </div>
-            </div>
+            </section>
           </div>
         </div>
-      </section>
+      </div>
     </main>
   );
 }
