@@ -233,7 +233,7 @@ const AboutUs = () => {
         <div className="container mx-auto px-6">
           <h2
             id="offerings-heading"
-            className="text-center text-4xl md:text-5xl font-bold text-emerald-800 mb-4"
+            className="text-center text-4xl md:text-5xl font-bold text-gray-800 mb-4"
           >
             Our Digital Wellness Resources
           </h2>
@@ -285,7 +285,7 @@ const AboutUs = () => {
         <div className="container mx-auto px-6 text-center">
           <h2
             id="cta-heading"
-            className="text-3xl font-bold text-emerald-800 mb-6"
+            className="text-3xl font-bold text-gray-800 mb-6"
           >
             Ready to Transform Your Tech Habits?
           </h2>
