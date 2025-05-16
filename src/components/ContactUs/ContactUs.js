@@ -63,7 +63,7 @@ const ContactUs = () => {
               <p className="inline-block border border-emerald-600 py-1 px-3 rounded-full bg-gradient-to-br from-emerald-700 via-emerald-600 to-emerald-700 bg-clip-text text-transparent font-medium text-sm mb-4 shadow-sm">
                 CONNECT WITH US
               </p>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-emerald-800 mb-4">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
                 Get Personalized Digital Wellness Guidance
               </h1>
               <p className="text-lg text-gray-700 max-w-2xl mx-auto">
@@ -79,9 +79,9 @@ const ContactUs = () => {
               >
                 <h2
                   id="form-heading"
-                  className="text-2xl font-bold text-emerald-800 mb-6 flex items-center"
+                  className="text-2xl font-bold text-gray-800 mb-6 flex items-center"
                 >
-                  <MessageSquare className="h-6 w-6 text-emerald-600 mr-3" />
+                  <MessageSquare className="h-6 w-6 text-gray-600 mr-3" />
                   Send Us a Message
                 </h2>
                 <form onSubmit={handleSubmit(onSubmit)} noValidate>
@@ -267,13 +267,13 @@ const ContactUs = () => {
               <aside className="md:col-span-5 space-y-8">
                 <section
                   aria-labelledby="contact-info-heading"
-                  className="bg-white rounded-3xl shadow-xl p-6 sm:p-8 text-emerald-800 transform transition-all duration-500 hover:scale-105"
+                  className="bg-white rounded-3xl shadow-xl p-6 sm:p-8 text-gray-800 transform transition-all duration-500 hover:scale-105"
                 >
                   <h3
                     id="contact-info-heading"
                     className="text-xl font-bold mb-6 flex items-center"
                   >
-                    <Users className="h-6 w-6 text-emerald-600 mr-3" />
+                    <Users className="h-6 w-6 text-gray-600 mr-3" />
                     Contact Information
                   </h3>
                   <div className="space-y-6">
@@ -340,10 +340,10 @@ const ContactUs = () => {
                 >
                   <h3
                     id="faq-heading"
-                    className="text-xl font-bold text-emerald-800 mb-4 flex items-center"
+                    className="text-xl font-bold text-gray-800 mb-4 flex items-center"
                   >
                     <Leaf
-                      className="h-6 w-6 text-emerald-600 mr-3"
+                      className="h-6 w-6 text-gray-600 mr-3"
                       aria-hidden="true"
                     />
                     Digital Wellness FAQs
@@ -408,14 +408,14 @@ const ContactUs = () => {
             >
               <h3
                 id="map-heading"
-                className="text-xl font-bold text-emerald-800 mb-6 flex items-center"
+                className="text-xl font-bold text-gray-800 mb-6 flex items-center"
               >
-                <MapPin className="h-6 w-6 text-emerald-600 mr-3" />
+                <MapPin className="h-6 w-6 text-gray-600 mr-3" />
                 Find Us Here
               </h3>
               <div className="h-80 rounded-2xl overflow-hidden bg-gray-100 aspect-video">
                 <iframe
-                  title="Breatheoffline Office Location on Google Maps"
+                  title="Anant Soft Computing"
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.169202432397!2d73.16878167596472!3d22.309439742562773!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395fc5873e594259%3A0xda3dc91c20f4beec!2sAnant%20Soft%20Computing!5e0!3m2!1sen!2sin!4v1731308281495!5m2!1sen!2sin"
                   width="100%"
                   height="100%"

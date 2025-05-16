@@ -80,7 +80,7 @@ const NewsLetter = () => {
             </div>
             <h2
               id="newsletter-heading"
-              className="text-4xl md:text-5xl font-bold text-emerald-800 mb-6"
+              className="text-4xl md:text-5xl font-bold text-gray-800 mb-6"
             >
               Reclaim Your Focus With Our Newsletter
             </h2>
