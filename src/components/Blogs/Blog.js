@@ -588,8 +588,7 @@ export default function Blog() {
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                       />
                       <div className="absolute top-4 left-4">
-                        <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-white/90 text-emerald-600 text-sm font-medium">
-                          <Tag className="h-3 w-3" aria-hidden="true" />
+                        <span className="px-3 py-1 rounded-full bg-white/90 text-emerald-600 text-sm font-medium">
                           {blog.category.name}
                         </span>
                       </div>
