@@ -383,8 +383,7 @@ export default function Blog() {
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute top-4 left-4">
-                    <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-white/90 text-emerald-600 text-sm font-medium">
-                      <Tag className="h-3 w-3" aria-hidden="true" />
+                    <span className="px-3 py-1 rounded-full bg-white/90 text-emerald-600 text-sm font-medium">
                       {featuredBlog.category.name}
                     </span>
                   </div>
@@ -400,19 +399,27 @@ export default function Blog() {
 
                   <div className="flex flex-wrap gap-2 mb-4">
                     {featuredBlog.tags.slice(0, 3).map((tag, index) => (
-                      <span
+                      <Link
                         key={index}
-                        className="px-3 py-1 bg-emerald-50 text-emerald-600 rounded-full text-sm"
+                        href={`/tag/${tag.slug}`}
+                        className="inline-flex items-center gap-1 px-2 py-1 rounded-full border-2 border-emerald-100 bg-emerald-50 text-emerald-600 text-sm"
+                        aria-label={`View all posts tagged ${tag.name}`}
+                        itemProp="keywords"
                       >
+                        <Tag className="h-3 w-3" aria-hidden="true" />{" "}
                         {tag.name}
-                      </span>
+                      </Link>
                     ))}
                   </div>
 
                   <div className="mt-auto">
                     <div className="flex items-center gap-3 mb-4">
                       <div className="w-10 h-10 rounded-full border-2 border-emerald-100 flex items-center justify-center bg-emerald-100 text-emerald-600 font-semibold">
-                        {featuredBlog.author.full_name.charAt(0)}
+                        {featuredBlog.author.full_name.includes(" ")
+                          ? `${featuredBlog.author.full_name.split(" ")[0][0]}${
+                              featuredBlog.author.full_name.split(" ")[1][0]
+                            }`
+                          : featuredBlog.author.full_name.substring(0, 2)}
                       </div>
                       <div>
                         <p className="text-sm font-medium text-gray-900">
@@ -604,12 +611,16 @@ export default function Blog() {
                       <div className="flex flex-wrap gap-2 mb-4">
                         {blog.tags &&
                           blog.tags.slice(0, 3).map((tag, index) => (
-                            <span
+                            <Link
                               key={index}
-                              className="px-2 py-1 bg-gray-100 rounded-md text-sm text-gray-600"
+                              href={`/tag/${tag.slug}`}
+                              className="inline-flex items-center gap-1 px-2 py-1 rounded-full border-2 border-emerald-100 bg-emerald-100 text-emerald-600 text-sm"
+                              aria-label={`View all posts tagged ${tag.name}`}
+                              itemProp="keywords"
                             >
+                              <Tag className="h-3 w-3" aria-hidden="true" />{" "}
                               {tag.name}
-                            </span>
+                            </Link>
                           ))}
                         {blog.tags && blog.tags.length > 3 && (
                           <span className="px-2 py-1 rounded-md text-sm text-gray-500">
@@ -621,15 +632,15 @@ export default function Blog() {
                       <div className="mt-auto">
                         <div className="flex items-center gap-3 mb-3">
                           <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 border-emerald-100 flex items-center justify-center bg-emerald-100 text-emerald-600 font-semibold">
-                            {blog.author && blog.author.full_name
-                              ? blog.author.full_name.charAt(0)
-                              : "?"}
+                            {blog.author.full_name.includes(" ")
+                              ? `${blog.author.full_name.split(" ")[0][0]}${
+                                  blog.author.full_name.split(" ")[1][0]
+                                }`
+                              : blog.author.full_name.substring(0, 2)}
                           </div>
                           <div>
                             <p className="text-xs sm:text-sm font-medium text-gray-900">
-                              {blog.author
-                                ? blog.author.full_name
-                                : "Unknown Author"}
+                              {blog.author.full_name}
                             </p>
                             <p className="text-xs sm:text-sm text-gray-500">
                               {moment(blog.published_at).format("ll")}
