@@ -6,11 +6,8 @@ import {
   BrainCircuit,
   Smartphone,
   Users,
-  Shield,
   BookOpen,
   Hourglass,
-  CalendarDays,
-  LampDesk,
 } from "lucide-react";
 
 const coreBenefits = [
@@ -30,60 +27,6 @@ const coreBenefits = [
     id: "core-benefit-3",
     icon: <Users className="h-5 w-5 text-emerald-600" aria-hidden="true" />,
     label: "Supportive Community",
-  },
-];
-
-const features = [
-  {
-    id: "feature-1",
-    icon: (
-      <Smartphone className="h-6 w-6 text-emerald-600" aria-hidden="true" />
-    ),
-    bgColor: "bg-emerald-100",
-    title: "Digital Detox Plans",
-    description:
-      "Step-by-step guides to reduce screen time and break digital addiction cycles.",
-  },
-  {
-    id: "feature-2",
-    icon: <BookOpen className="h-6 w-6 text-emerald-600" aria-hidden="true" />,
-    bgColor: "bg-emerald-100",
-    title: "Mindful Tech Journaling",
-    description:
-      "Reflective exercises to understand and improve your digital habits.",
-  },
-  {
-    id: "feature-3",
-    icon: (
-      <CalendarDays className="h-6 w-6 text-emerald-600" aria-hidden="true" />
-    ),
-    bgColor: "bg-emerald-100",
-    title: "30-Day Challenges",
-    description:
-      "Structured programs to build lasting digital wellness habits.",
-  },
-  {
-    id: "feature-4",
-    icon: <LampDesk className="h-6 w-6 text-emerald-600" aria-hidden="true" />,
-    bgColor: "bg-emerald-100",
-    title: "Focus Enhancement",
-    description: "Techniques to improve concentration and deep work sessions.",
-  },
-  {
-    id: "feature-5",
-    icon: <Shield className="h-6 w-6 text-emerald-600" aria-hidden="true" />,
-    bgColor: "bg-emerald-100",
-    title: "Digital Boundaries",
-    description: "Learn to set healthy limits with your devices and apps.",
-  },
-  {
-    id: "feature-6",
-    icon: (
-      <BrainCircuit className="h-6 w-6 text-emerald-600" aria-hidden="true" />
-    ),
-    bgColor: "bg-emerald-100",
-    title: "Neuroscience Insights",
-    description: "Understand how technology affects your brain and wellbeing.",
   },
 ];
 
@@ -215,52 +158,6 @@ const Hero = () => {
                 </div>
               ))}
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="digital-wellness-resources" className="py-16 bg-white">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-              Practical Digital Wellness Resources
-            </h2>
-            <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-              Research-backed tools and methods to help you build healthier tech
-              habits.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-8xl mx-auto">
-            {features.map((feature) => (
-              <article
-                key={feature.id}
-                className="p-6 bg-white rounded-xl border border-emerald-200/60 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col"
-                aria-labelledby={`feature-title-${feature.id}`}
-              >
-                <div
-                  className={`${feature.bgColor} p-3 rounded-lg w-12 h-12 flex items-center justify-center mb-4`}
-                >
-                  {feature.icon}
-                </div>
-                <h3
-                  id={`feature-title-${feature.id}`}
-                  className="text-xl font-semibold text-emerald-700 mb-2"
-                >
-                  {feature.title}
-                </h3>
-                <p className="text-gray-600 mb-4 flex-grow">
-                  {feature.description}
-                </p>
-                <Link
-                  href="/blogs"
-                  className="inline-flex items-center text-gray-600 hover:text-emerald-600 transition-colors mt-auto"
-                  aria-label={`Explore ${feature.title}`}
-                >
-                  Explore Now
-                  <ArrowRight className="ml-1 h-4 w-4" aria-hidden="true" />
-                </Link>
-              </article>
-            ))}
           </div>
         </div>
       </section>
