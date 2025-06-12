@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export const metadata = {
   title: "How BreatheOffline Uses Cookies on This Site | Cookie Policy",
   description:
@@ -304,18 +306,24 @@ export default function CookiesPolicy() {
                   If you have any questions or concerns about these Terms and
                   Conditions, please contact us at:
                 </p>
-                <address className="mt-2 text-emerald-600 not-italic">
+                <address className="mt-2 text-gray-600 not-italic">
                   Email:{" "}
                   <a
                     href="mailto:support@breatheoffline.com"
-                    className="hover:underline"
+                    className="text-emerald-600 hover:text-emerald-700 hover:underline"
                   >
                     support@breatheoffline.com
                   </a>
                   <br />
-                  Address: Alkapuri, Vadodara, Gujarat, India 390007.
+                  Contact: Available on{" "}
+                  <Link
+                    href="/contact-us"
+                    className="text-emerald-600 hover:text-emerald-700 hover:underline"
+                  >
+                    breatheoffline.com
+                  </Link>
                   <br />
-                  Contact: Available on breatheoffline.com
+                  Address: Alkapuri, Vadodara, Gujarat, India 390007.
                 </address>
               </div>
             </section>

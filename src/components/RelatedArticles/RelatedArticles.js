@@ -15,7 +15,10 @@ export default function RelatedArticles({ relatedBlogs }) {
       aria-labelledby="related-articles-heading"
     >
       <div className="flex items-center mb-6">
-        <Sparkles className="h-6 w-6 text-emerald-600 mr-3" aria-hidden="true" />
+        <Sparkles
+          className="h-6 w-6 text-emerald-600 mr-3"
+          aria-hidden="true"
+        />
         <h2
           id="related-articles-heading"
           className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-emerald-600 to-emerald-600 bg-clip-text text-transparent"
