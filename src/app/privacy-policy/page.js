@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export const metadata = {
   title: "How We Protect Your Data | BreatheOffline Privacy Policy",
   description:
@@ -463,16 +465,22 @@ export default function PrivacyPolicy() {
                   For any questions or concerns about this Privacy Policy,
                   please contact us:
                 </p>
-                <address className="mt-2 text-emerald-600 not-italic">
+                <address className="mt-2 text-gray-600 not-italic">
                   Email:{" "}
                   <a
                     href="mailto:support@breatheoffline.com"
-                    className="hover:underline"
+                    className="text-emerald-600 hover:text-emerald-700 hover:underline"
                   >
                     support@breatheoffline.com
                   </a>
                   <br />
-                  Contact: Available on breatheoffline.com
+                  Contact: Available on{" "}
+                  <Link
+                    href="/contact-us"
+                    className="text-emerald-600 hover:text-emerald-700 hover:underline"
+                  >
+                    breatheoffline.com
+                  </Link>
                 </address>
               </div>
             </section>

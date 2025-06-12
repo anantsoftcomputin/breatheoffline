@@ -18,7 +18,7 @@ export default function Home() {
     description:
       "BreatheOffline offers insights on achieving harmony in a tech-driven world. Find resources for mindfulness, self-care, and a healthier connection to technology.",
   };
-  
+
   return (
     <>
       <script
