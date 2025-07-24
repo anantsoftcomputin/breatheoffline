@@ -309,10 +309,10 @@ export default function CookiesPolicy() {
                 <address className="mt-2 text-gray-600 not-italic">
                   Email:{" "}
                   <a
-                    href="mailto:support@breatheoffline.com"
+                    href="mailto:breatheoffline@gmail.com"
                     className="text-emerald-600 hover:text-emerald-700 hover:underline"
                   >
-                    support@breatheoffline.com
+                    breatheoffline@gmail.com
                   </a>
                   <br />
                   Contact: Available on{" "}

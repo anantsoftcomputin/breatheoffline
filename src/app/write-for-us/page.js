@@ -36,8 +36,8 @@ export const metadata = {
   },
 };
 
-import WriteToUs from "@/components/WriteToUs/WriteToUs";
+import WriteForUs from "@/components/WriteForUs/WriteForUs";
 
-export default function writeToUs() {
-  return <WriteToUs />;
+export default function writeForUs() {
+  return <WriteForUs />;
 }
