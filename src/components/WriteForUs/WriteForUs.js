@@ -1,14 +1,5 @@
 "use client";
-import {
-  Sparkles,
-  BookOpen,
-  ThumbsUp,
-  Send,
-  PenSquare,
-  Check,
-  X,
-} from "lucide-react";
-import Link from "next/link";
+import { PenSquare, Check, X } from "lucide-react";
 
 const WriteForUs = () => {
   return (
@@ -29,7 +20,7 @@ const WriteForUs = () => {
           </div>
           <div className="space-y-6">
             <section
-              aria-labelledby="privacy-intro-heading"
+              aria-label="Introduction to writing for us"
               className="bg-white shadow-md rounded-lg overflow-hidden"
             >
               <div className="p-6">
@@ -43,12 +34,12 @@ const WriteForUs = () => {
             </section>
 
             <section
-              aria-labelledby="info-collected-heading"
+              aria-labelledby="why-write-for-us-heading"
               className="bg-white shadow-md rounded-lg overflow-hidden"
             >
               <div className="px-6 py-4 border-b border-gray-200">
                 <h2
-                  id="info-collected-heading"
+                  id="why-write-for-us-heading"
                   className="text-xl font-semibold text-gray-900"
                 >
                   Why Write for Us?
@@ -73,12 +64,12 @@ const WriteForUs = () => {
             </section>
 
             <section
-              aria-labelledby="how-we-use-info-heading"
+              aria-labelledby="topics-we-love-heading"
               className="bg-white shadow-md rounded-lg overflow-hidden"
             >
               <div className="px-6 py-4 border-b border-gray-200">
                 <h2
-                  id="how-we-use-info-heading"
+                  id="topics-we-love-heading"
                   className="text-xl font-semibold text-gray-900"
                 >
                   Topics We Love
@@ -129,12 +120,12 @@ const WriteForUs = () => {
             </section>
 
             <section
-              aria-labelledby="cookies-tracking-heading"
+              aria-labelledby="submission-guidelines-heading"
               className="bg-white shadow-md rounded-lg overflow-hidden"
             >
               <div className="px-6 py-4 border-b border-gray-200">
                 <h2
-                  id="cookies-tracking-heading"
+                  id="submission-guidelines-heading"
                   className="text-xl font-semibold text-gray-900"
                 >
                   Submission Guidelines
@@ -192,12 +183,12 @@ const WriteForUs = () => {
             </section>
 
             <section
-              aria-labelledby="third-party-services-heading"
+              aria-labelledby="ready-to-submit-heading"
               className="bg-white shadow-md rounded-lg overflow-hidden"
             >
               <div className="px-6 py-4 border-b border-gray-200">
                 <h2
-                  id="third-party-services-heading"
+                  id="ready-to-submit-heading"
                   className="text-xl font-semibold text-gray-900"
                 >
                   Ready to Submit?
