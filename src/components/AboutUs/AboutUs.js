@@ -15,7 +15,7 @@ import Link from "next/link";
 
 const stats = [
   {
-    id: "stat-mindful",
+    id: "stat-mindful-1",
     number: "25K+",
     label: "Mindful Members",
     icon: <Leaf className="h-6 w-6 text-emerald-600" aria-hidden="true" />,
